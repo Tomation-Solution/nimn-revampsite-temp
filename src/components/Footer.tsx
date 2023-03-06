@@ -62,8 +62,8 @@ const Footer = () => {
             Recent Posts
           </p>
           <div className="">
-            {data.map((post) => (
-              <RecentPostCard title={post.title} date={post.date} />
+            {data.map((post, index) => (
+              <RecentPostCard key={index} title={post.title} date={post.date} />
             ))}
           </div>
         </div>

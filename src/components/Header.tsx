@@ -79,8 +79,8 @@ const Header = () => {
           showMenu ? "flex " : "hidden"
         }`}
       >
-        {navData.map((item) => (
-          <NavButton name={item.name} url={item.url} />
+        {navData.map((item, index) => (
+          <NavButton key={index} name={item.name} url={item.url} />
         ))}
       </div>
     </>

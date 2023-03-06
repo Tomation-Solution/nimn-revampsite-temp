@@ -70,8 +70,9 @@ const Events = () => {
         </button>
       </div>
       <div className="grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 ">
-        {data.map((event) => (
+        {data.map((event, index) => (
           <EventCard
+            key={index}
             title={event.title}
             description={event.description}
             date={event.date}

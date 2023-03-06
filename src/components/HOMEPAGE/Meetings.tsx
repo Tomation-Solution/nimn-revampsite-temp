@@ -56,8 +56,9 @@ const Meetings = () => {
         </p>
       </div>
       <div className="grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 ">
-        {data.map((item) => (
+        {data.map((item, index) => (
           <MeetingCard
+            key={index}
             title={item.title}
             details={item.details}
             type={item.type}

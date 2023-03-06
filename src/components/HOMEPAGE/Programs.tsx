@@ -56,8 +56,9 @@ const Programs = () => {
   return (
     <div className="bg-pri_var_2 lg:p-[10em] md:p-[6em] p-[2em]">
       <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
-        {data.map((item) => (
+        {data.map((item, index) => (
           <ProgramsCard
+            key={index}
             img={item.img}
             title={item.title}
             body={item.body}
