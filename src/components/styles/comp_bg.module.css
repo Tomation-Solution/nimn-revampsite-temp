@@ -1,0 +1,8 @@
+.showcase {
+  background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
+    url("../../../public/images/showcase_bg.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
