@@ -7,6 +7,7 @@ import {
   Profile,
   Programs,
   Showcase,
+  SpotLight
 } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,8 +21,8 @@ export default function Home() {
         <Profile />
         <Programs />
         <Events />
-        {/* <Insights /> */}
         <Meetings />
+        <SpotLight />
       </main>
     </>
   );

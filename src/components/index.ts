@@ -4,3 +4,5 @@ export { default as Programs } from "./HOMEPAGE/Programs";
 export { default as Events } from "./HOMEPAGE/Events";
 export { default as Insights } from "./HOMEPAGE/Insights";
 export { default as Meetings } from "./HOMEPAGE/Meetings";
+export { default as SpotLight } from "./HOMEPAGE/SpotLight";
+
