@@ -22,6 +22,7 @@ export default function Home() {
         <Programs />
         <Events />
         <Meetings />
+        <Insights/>
         <SpotLight />
       </main>
     </>

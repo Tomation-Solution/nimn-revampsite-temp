@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
+import classes from "../styles/comp_bg.module.css";
 
 const data = [
   {
@@ -8,20 +9,23 @@ const data = [
       "The 2021 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
     date: "26th to 28th October, 2021",
     type: "Virtual Conference",
+    img:'classes.profilesectrion'
   },
   {
-    title: "NIMN 2021 Annual Conference",
+    title: "NIMN 2022 Annual Conference",
     description:
-      "The 2021 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
-    date: "26th to 28th October, 2021",
+      "The 2022 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
+    date: "26th to 28th October, 2022",
     type: "Virtual Conference",
+    img:'classes.showcase'
   },
   {
-    title: "NIMN 2021 Annual Conference",
+    title: "NIMN 2023 Annual Conference",
     description:
-      "The 2021 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
-    date: "26th to 28th October, 2021",
+      "The 2023 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
+    date: "26th to 28th October, 2023",
     type: "Virtual Conference",
+    img:'classes.about'
   },
 ];
 
@@ -30,6 +34,7 @@ const InsightCard = ({
   description,
   date,
   type,
+  img,
 }: {
   title: string;
   description: string;
@@ -37,21 +42,21 @@ const InsightCard = ({
   type: string;
 }) => {
   return (
-    <div>
-      <div className="bg-pri_var_2 text-white">
-        <p className="font-[700] text-[42px] p-[2em]">{title}</p>
+    <div >
+      <div className={`bg-white ${classes.about} `}>
+        <p className="font-[700] text-[42px] text-black  p-[2em] pt-10">{title}</p>
       </div>
 
       <div className="border-p_gray p-[2em] ">
         <div className="flex items-center gap-x-2">
           <p>
-            <AiOutlineCalendar />
+            <AiOutlineCalendar color={'#fff'} />
           </p>
           <p className="text-p_gray text-[12px] ">EVENT</p>
         </div>
-        <p className="text-[20px] font-[600] ">{description}</p>
-        <p className="text-p_gray text-[14px] ">{date}</p>
-        <p className="text-p_gray text-[14px] ">{type}</p>
+        <p className="text-[20px] font-[600] text-white ">{description}</p>
+        <p className="text-p_gray text-[14px]text-white ">{date}</p>
+        <p className="text-p_gray text-[14px] text-white ">{type}</p>
       </div>
     </div>
   );
@@ -77,6 +82,7 @@ const Insights = () => {
             description={event.description}
             date={event.date}
             type={event.type}
+            img ={event.img}
           />
         ))}
       </div>

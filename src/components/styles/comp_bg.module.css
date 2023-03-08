@@ -6,3 +6,20 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.about {
+  background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
+    url("../../../public/images/Rectangle_1.png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.profilesectrion {
+  background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
+    url("../../../public/images/Rectangle_6.png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

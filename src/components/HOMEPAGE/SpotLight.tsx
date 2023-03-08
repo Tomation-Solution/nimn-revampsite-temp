@@ -65,7 +65,7 @@ const SpotLight = () => {
           <SpotLightCard
           key={index}
           img={item.img}
-          title={item.title
+          title={item.title}
           body={item.body}
           link={item.link}
           />
