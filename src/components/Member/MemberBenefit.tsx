@@ -4,7 +4,7 @@ function MemberBenefit() {
   return (
     <div className='flex flex-col items-center mt-20 '>
         <h2 className=' font-bold mt-10  text-[64px] mb-5 text-pri'> Membership Benefits </h2>
-        <p className='text-[24px] text-p_gray text-justify leading-10 flex-wrap w-[1100px]'> 
+        <p className='text-[24px] text-p_gray text-justify leading-10 flex-wrap lg:w-[1100px] w-full '> 
         Membership of the Institute is compulsory for all practitioners of the marketing profession.
         <br/>   A person shall be deemed to practice as a marketer if in consideration of remuneration received or to be received and whether by himself or in partnership with any other    <br/> persons, he:
 <br/>

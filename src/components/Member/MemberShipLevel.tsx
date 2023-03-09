@@ -74,7 +74,7 @@ const SpotLightCard = ({
 }) => {
   return (
     <div className="relative flex flex-col items-center">
-    <div className='bg-pri_var_1 rounded-sm w-[413px] h-[60px] items-center justify-center '> 
+    <div className='bg-pri_var_1 rounded-sm  w-[413px] h-[60px] items-center justify-center '> 
         <p className=" text-white text-center pt-3 font-semibold text-[24px]" > {title} </p>
     </div>
 
@@ -84,7 +84,8 @@ const SpotLightCard = ({
 
        </div>
 
-      <div className="flex flex-col  gap-2 text-center  bg-white rounded-md px-[1.5em] py-[2em] ">
+      <div className="flex flex-col  lg:gap-2 gap-1 text-center  bg-white rounded-md px-[1.5em] py-[2em] ">
+
         <div className=" flex  gap-4 flex-row items-center w-full  ">   
           <BsCheckCircle color={'#00FF00'} /> 
           <p className="text-[15px] text-center text-p_gray">{body}</p>
