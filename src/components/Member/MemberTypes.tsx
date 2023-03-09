@@ -60,13 +60,13 @@ const SpotLightCard = ({
 }) => {
   return (
     <div className="relative flex flex-col items-center">
-          <div>  
-          <Image width={100}  height={100}src={img} alt={title}
+          <div className="jusify-center">  
+          <Image width={80}  height={80}src={img} alt={title}
                 quality={100}
-              className=' mb-20'
+              className=' '
                 />
-</div>
-      <div className="flex flex-col gap-y-[1em]mt-10 text-center absolute -bottom-[10em] bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
+                </div>
+      <div className="flex flex-col gap-y-[1em] mt-10 text-center  bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
         <p className="text-pri_var_2 text-[20px] font-[600]">{title}</p>
         <p className="text-[15px] text-p_gray">{body}</p>
         <a className="text-pri_var_1 font-[600] text-[16px]" href={link}>
