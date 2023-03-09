@@ -17,7 +17,7 @@ function membership() {
     <MemberBenefit/>
     <MemberTypes/>
     <MemberLevels/>
-    {/* <Requirement/> */}
+    <Requirement/>
   </main>
 
 </>
