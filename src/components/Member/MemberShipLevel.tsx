@@ -74,7 +74,7 @@ const SpotLightCard = ({
 }) => {
   return (
     <div className="relative flex flex-col items-center">
-    <div className='bg-pri_var_1 rounded-sm  w-[413px] h-[60px] items-center justify-center '> 
+    <div className='bg-pri_var_1  rounded-sm lg:w-[413px] w-80 h-[60px] items-center justify-center '> 
         <p className=" text-white text-center pt-3 font-semibold text-[24px]" > {title} </p>
     </div>
 

@@ -34,7 +34,6 @@ const InsightCard = ({
   description,
   date,
   type,
-  img,
 }: {
   title: string;
   description: string;
@@ -82,7 +81,6 @@ const Insights = () => {
             description={event.description}
             date={event.date}
             type={event.type}
-            img ={event.img}
           />
         ))}
       </div>
