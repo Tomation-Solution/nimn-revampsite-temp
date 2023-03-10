@@ -1,10 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import showcase_bg from "../../../public/images/showcase_bg.jpg";
 import grad from "../../../public/images/grad.jpeg";
 import guy from "../../../public/images/guy.jpeg";
 import Image from "next/image";
 import { BsCheckCircle } from "react-icons/bs";
+import PaymrntFormModal from "./component/PaymentForm";
 
 const data = [
   {
@@ -58,23 +59,17 @@ const data = [
 ];
 
 
-const SpotLightCard = ({
-  img,
-  title,
-  body,
-  link,
-  amount
-}: {
-  img: any;
-  title: string;
-  body: string;
-  link: string;
-  amount:string
+const SpotLightCard = ({img, title,body,link, amount}: {  img: any;title: string;body: string;link: string;amount:string}) => {
+  const [isPaymentModalOpen, setPaymentModalOpen] = useState(false);
 
-}) => {
+
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex z-10 flex-col items-center">
+             <PaymrntFormModal
+             openNow={isPaymentModalOpen}
+             onClose={() => setPaymentModalOpen(false)}/>
     <div className='bg-pri_var_1  rounded-sm lg:w-[413px] w-80 h-[60px] items-center justify-center '> 
+
         <p className=" text-white text-center pt-3 font-semibold text-[24px]" > {title} </p>
     </div>
 
@@ -138,21 +133,23 @@ const SpotLightCard = ({
         </div>
         <hr/>
       </div>
-       <button className="bg-pri_var_2 w-[262px] rounded-md h-[77px]">
+       <button onClick={() => setPaymentModalOpen(true)}  className="bg-pri_var_2 w-[262px] rounded-md h-[77px]">
         <p className="text-lg text-white font-extrabold"> Become a Member </p>
        </button>
+
     </div>
   );
 };
 
 const SpotLight = () => {
+
   return (
-    <div className="md:px-[5em] p-[1em] md:my-[8em] mt-6">
+    <div  className=" z-10 md:px-[5em] p-[1em] md:my-[8em] mt-6">
       <div className="flex  flex-col justify-center my-[3em] gap-6">
         <p className="text-[42px] font-[700] text-pri text-center"> Membership Levels </p>
     <p className=" text-center mb-14"> Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
       </div>
-      <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
+      <div className=" z-10  grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
         {data.map((item, index) => (
           <SpotLightCard
           key={index}
@@ -165,7 +162,10 @@ const SpotLight = () => {
         ))}
       </div>
       <div className="mt-5 flex justify-center items-center"> 
-      <button className=" justify-center items-center text-white bg-pri_var_2 w-[116px] h-[59px] font-normal text-lg"> see more </button>
+      <button   
+      className=" justify-center items-center text-white bg-pri_var_2 w-[116px] h-[59px] font-normal text-lg">
+                see more
+          </button>
 
       </div>
     </div>

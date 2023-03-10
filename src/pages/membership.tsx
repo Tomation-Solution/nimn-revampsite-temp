@@ -6,6 +6,7 @@ import {
     MemberTypes,
     MemberLevels,
     Requirement,
+    Testimoney
   } from "@/components";
 
 function membership() {
@@ -18,6 +19,7 @@ function membership() {
     <MemberTypes/>
     <MemberLevels/>
     <Requirement/>
+   <Testimoney/> 
   </main>
 
 </>

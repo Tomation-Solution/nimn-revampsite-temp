@@ -11,6 +11,10 @@ export { default as MemberBenefit} from './Member/MemberBenefit'
 export { default as MemberTypes} from './Member/MemberTypes'
 export { default as MemberLevels} from './Member/MemberShipLevel'
 export { default as Requirement} from './Member/Requirement'
+export { default as Testimoney} from './Member/Testimon'
+export { default as Modal} from './components/Modals'
+
+
 
 
 

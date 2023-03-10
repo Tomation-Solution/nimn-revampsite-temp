@@ -1,4 +1,6 @@
 import React from "react";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 const data = [
   {
@@ -18,6 +20,22 @@ const data = [
   },
 ];
 
+const options = [
+  { value: 'one', label: 'One' },
+  { value: 'two', label: 'Two', className: 'myOptionClassName' },
+  {
+   type: 'group', name: 'group1', items: [
+     { value: 'three', label: 'Three', className: 'myOptionClassName' },
+     { value: 'four', label: 'Four' }
+   ]
+  },
+  {
+   type: 'group', name: 'group2', items: [
+     { value: 'five', label: 'Five' },
+     { value: 'six', label: 'Six' }
+   ]
+  }
+];
 const RequireMentCard = ({
   title,
   details,
@@ -43,6 +61,7 @@ const RequireMentCard = ({
 
 const Requirement = () => {
   return (
+    <div>  
     <div className="lg:px-[5em] md:px-[3em] px-[1em]">
       <div
         className="
@@ -60,6 +79,13 @@ const Requirement = () => {
           />
         ))}
       </div>
+<div className=" w-[90%] items-center flex-1 rounded-lg ml-10 mt-10  ">
+<Dropdown className=" rounded-lg" options={options}   placeholder="Select an option" 
+  arrowClosed={<span className="arrow-closed" />}
+  arrowOpen={<span className="arrow-open" />}/>
+</div>
+
+    </div>
     </div>
   );
 };
