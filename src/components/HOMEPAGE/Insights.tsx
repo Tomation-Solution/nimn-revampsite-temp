@@ -9,7 +9,7 @@ const data = [
       "The 2021 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
     date: "26th to 28th October, 2021",
     type: "Virtual Conference",
-    img:'classes.profilesectrion'
+    img: "classes.profilesectrion",
   },
   {
     title: "NIMN 2022 Annual Conference",
@@ -17,7 +17,7 @@ const data = [
       "The 2022 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
     date: "26th to 28th October, 2022",
     type: "Virtual Conference",
-    img:'classes.showcase'
+    img: "classes.showcase",
   },
   {
     title: "NIMN 2023 Annual Conference",
@@ -25,7 +25,7 @@ const data = [
       "The 2023 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
     date: "26th to 28th October, 2023",
     type: "Virtual Conference",
-    img:'classes.about'
+    img: "classes.about",
   },
 ];
 
@@ -41,21 +41,21 @@ const InsightCard = ({
   type: string;
 }) => {
   return (
-    <div >
-      <div className={`bg-white ${classes.about} `}>
-        <p className="font-[700] text-[42px] text-black  p-[2em] pt-10">{title}</p>
+    <div>
+      <div className={`bg-white ${classes.about} h-[15em] `}></div>
+      <div className="p-3 mb-[1em] bg-white">
+        <p className="font-[700] text-[25px] text-black ">{title}</p>
       </div>
-
-      <div className="border-p_gray p-[2em] ">
+      <div className="border-p_gray  ">
         <div className="flex items-center gap-x-2">
           <p>
-            <AiOutlineCalendar color={'#fff'} />
+            <AiOutlineCalendar color={"#fff"} />
           </p>
           <p className="text-p_gray text-[12px] ">EVENT</p>
         </div>
         <p className="text-[20px] font-[600] text-white ">{description}</p>
         <p className="text-p_gray text-[14px]text-white ">{date}</p>
-        <p className="text-p_gray text-[14px] text-white ">{type}</p>
+        <p className="text-p_gray text-[14px] ">{type}</p>
       </div>
     </div>
   );
