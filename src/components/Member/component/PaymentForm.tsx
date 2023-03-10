@@ -7,7 +7,10 @@ type PaymentFormModalProps = {
   openNow: any; // You should replace 'any' with the actual type of 'openNow'
   onClose: any; // You should replace 'any' with the actual type of 'onClose'
 }
-
+type ModalOpenerProps = {
+    openNow: boolean;
+    onClose: () => void;
+  };
 const PaymentFormModal: React.FC<PaymentFormModalProps> = ({ openNow, onClose }) => {   
     const onLogoutButton = () => {
         console.log("logging out...");
@@ -20,7 +23,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({ openNow, onClose })
     return (
 
         <div> 
-        <Modal openNow={openNow} onClose={onClose}>
+      <Modal openNow: boolean onClose: () => void>
             <Dialog.Title
                 as="h3"
                 className=" ml-80 mb-10 text-3xl text-center font-bold leading-6  flex items-center"
@@ -79,7 +82,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({ openNow, onClose })
                         // }
                         return errors;
                     }}
-                    onSubmit={handleSubmit}
+                    // onSubmit={handleSubmit}
                     >
                 {({ isSubmitting }) => {
                         return (
