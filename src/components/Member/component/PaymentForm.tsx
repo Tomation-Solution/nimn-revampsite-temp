@@ -25,7 +25,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
 
   return (
     <div>
-      <Modal>
+      <Modal openNow={openNow} onClose={onClose}>
         <Dialog.Title
           as="h3"
           className=" ml-80 mb-10 text-3xl text-center font-bold leading-6  flex items-center"
