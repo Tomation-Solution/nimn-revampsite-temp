@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <div>
-<EmblaCarousel options={OPTIONS} descriptions={descriptions} />
+       <EmblaCarousel options={OPTIONS} descriptions={descriptions} />
     </div>
   );
 }

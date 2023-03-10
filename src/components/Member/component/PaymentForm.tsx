@@ -3,35 +3,35 @@ import { Dialog } from "@headlessui/react";
 import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
+type PaymentFormModalProps = {
+  openNow: any; // You should replace 'any' with the actual type of 'openNow'
+  onClose: any; // You should replace 'any' with the actual type of 'onClose'
+}
 
-
-const PaymentFormModal = ({ openNow, onClose }) => {
-   
+const PaymentFormModal: React.FC<PaymentFormModalProps> = ({ openNow, onClose }) => {   
     const onLogoutButton = () => {
         console.log("logging out...");
         onClose();
     };
-    const handleSubmit = async (values,{setSubmitting,resetForm})=>(
-          consol.log(values)
-           )
+    // const handleSubmit = async (values,{setSubmitting,resetForm})=>(
+    //       consol.log(values)
+    //        )
 
     return (
+
+        <div> 
         <Modal openNow={openNow} onClose={onClose}>
             <Dialog.Title
                 as="h3"
                 className=" ml-80 mb-10 text-3xl text-center font-bold leading-6  flex items-center"
             >
                 Membership Registration
-            </Dialog.Title>
-
-
-
-
-   
-<div className=" ">
-  <div className="mx-auto  ">
-    <h1 className="text-center text-2xl font-bold text-[#017d3f] sm:text-3xl">
-    </h1>
+                    </Dialog.Title>
+        
+        <div className=" ">
+        <div className="mx-auto  ">
+            <h1 className="text-center text-2xl font-bold text-[#017d3f] sm:text-3xl">
+            </h1>
 
     <p className="mx-auto text-lg mt-4 max-w-md text-center text-gray-500">
       become a member and enjoy memberahip benifits
@@ -50,33 +50,33 @@ const PaymentFormModal = ({ openNow, onClose }) => {
                     }}
                     validate={(values) => {
                         const errors = {};
-                        if (!values.email) {
-                            errors.email = 'Required';
-                        } else if (
-                            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                        ) {
-                            errors.email = 'Invalid email address';
-                        }
-                        if (!values.userFirstName) {
-                            errors.userFirstName = 'Required';
-                        }
-                        if (!values.userLastName) {
-                            errors.userLastName = 'Required';
-                        }
-                        if (!values.userName) {
-                            errors.userName = 'Required';
-                        }
-                        if (!values.phoneNumber) {
-                            errors.phoneNumber = 'Required';
-                        }
-                        if (!values.userPassword) {
-                            errors.userPassword = 'Required';
-                        }
-                        if (!values.confirmPassword) {
-                            errors.confirmPassword = 'Required';
-                        } else if (values.userPassword !== values.confirmPassword) {
-                            errors.confirmPassword = 'Password does not match';
-                        }
+                        // if (!values.email) {
+                        //     errors.email = 'Required';
+                        // } else if (
+                        //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                        // ) {
+                        //     errors.email = 'Invalid email address';
+                        // }
+                        // if (!values.userFirstName) {
+                        //     errors.userFirstName = 'Required';
+                        // }
+                        // if (!values.userLastName) {
+                        //     errors.userLastName = 'Required';
+                        // }
+                        // if (!values.userName) {
+                        //     errors.userName = 'Required';
+                        // }
+                        // if (!values.phoneNumber) {
+                        //     errors.phoneNumber = 'Required';
+                        // }
+                        // if (!values.userPassword) {
+                        //     errors.userPassword = 'Required';
+                        // }
+                        // if (!values.confirmPassword) {
+                        //     errors.confirmPassword = 'Required';
+                        // } else if (values.userPassword !== values.confirmPassword) {
+                        //     errors.confirmPassword = 'Password does not match';
+                        // }
                         return errors;
                     }}
                     onSubmit={handleSubmit}
@@ -143,7 +143,7 @@ const PaymentFormModal = ({ openNow, onClose }) => {
                                     <div className="relative">
                                         <Field
 
-                                            className="w-full rounded-lg border-2 border-black  shadow-lg border-gray-200 bg-white  p-4 pr-12  text-base shadow-sm"
+                                            className="w-full rounded-lg border-2 border-black  shadow-lg  bg-white  p-4 pr-12  text-base "
                                             type="text"
                                             name="userFirstName"
                                             placeholder="Organisation" />
@@ -312,6 +312,7 @@ const PaymentFormModal = ({ openNow, onClose }) => {
     
 
         </Modal>
+        </div>
     );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Dropdown from 'react-dropdown';
+// import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
 const data = [
@@ -79,11 +79,11 @@ const Requirement = () => {
           />
         ))}
       </div>
-<div className=" w-[90%] items-center flex-1 rounded-lg ml-10 mt-10  ">
+{/* <div className=" w-[90%] items-center flex-1 rounded-lg ml-10 mt-10  ">
 <Dropdown className=" rounded-lg" options={options}   placeholder="Select an option" 
   arrowClosed={<span className="arrow-closed" />}
   arrowOpen={<span className="arrow-open" />}/>
-</div>
+</div> */}
 
     </div>
     </div>

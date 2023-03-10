@@ -1,7 +1,16 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
+import { ReactElement, ReactNode } from "react";
 
-const Modal = ({ element, children, onClose, openNow }) => {
+type ModalProps = {
+  element: ReactElement;
+  children: ReactNode;
+  onClose: () => void;
+  openNow: boolean;
+};
+
+const Modal = ({ element, children, onClose, openNow }: ModalProps) => {
+  
    
     let [isOpen, setIsOpen] = useState(false);
 
