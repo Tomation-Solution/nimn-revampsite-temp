@@ -13,6 +13,16 @@ export { default as MemberLevels} from './Member/MemberShipLevel'
 export { default as Requirement} from './Member/Requirement'
 export { default as Testimoney} from './Member/Testimon'
 export { default as Modal} from './components/Modals'
+export { default as MissionSection } from './About/Mission'
+export { default as NIMNObjective } from './About/Objective'
+export { default as NIMNAct } from './About/NimnAct'
+export { default as CouncilMember } from './About/CouncilMemeber'
+export { default as Disciplinary } from './About/Disciplinary'
+
+
+
+
+
 
 
 
