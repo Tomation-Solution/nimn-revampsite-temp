@@ -18,6 +18,14 @@ export { default as NIMNObjective } from './About/Objective'
 export { default as NIMNAct } from './About/NimnAct'
 export { default as CouncilMember } from './About/CouncilMemeber'
 export { default as Disciplinary } from './About/Disciplinary'
+export { default as  EventsShowCase } from './Events/Showcase';
+export { default as  EventsConfrence } from './Events/NInmConfrence'
+export { default as  Event } from './Events/Events'
+export { default as  EventDetailsShowCase } from './Events/Details/ShowDetails'
+
+
+
+
 
 
 

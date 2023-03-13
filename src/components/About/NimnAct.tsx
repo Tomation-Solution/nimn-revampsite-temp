@@ -24,9 +24,6 @@ const NIMNAct = () => {
                 <button className=" justify-left items-left  text-white bg-pri_var_1 w-3/4 py-4 font-normal text-lg">
                     <Link href="/">Download the NIMN Act 2013 </Link>
                 </button>
-
-
-
             </div>
 
         </div>

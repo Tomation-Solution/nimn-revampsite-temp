@@ -1,10 +1,27 @@
 .showcase {
   background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
-  url("../../../public/images/Rectangle_11.png");
+    url("../../../public/images/Rectangle_11.png");
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.events {
+  background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
+    url("../../../public/images/Rectangle_2.png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.eventsdetails {
+  background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
+    url("../../../public/images/Rectangled.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .about {
@@ -15,6 +32,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .profilesectrion {
   background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
     url("../../../public/images/Rectangle_6.png");
@@ -23,6 +41,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .embla {
   --slide-spacing: 1rem;
   --slide-size: 100%;

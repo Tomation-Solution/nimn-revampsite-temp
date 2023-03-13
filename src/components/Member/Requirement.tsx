@@ -1,6 +1,6 @@
 import React from "react";
 // import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
+// import 'react-dropdown/style.css';
 
 const data = [
   {
@@ -24,16 +24,16 @@ const options = [
   { value: 'one', label: 'One' },
   { value: 'two', label: 'Two', className: 'myOptionClassName' },
   {
-   type: 'group', name: 'group1', items: [
-     { value: 'three', label: 'Three', className: 'myOptionClassName' },
-     { value: 'four', label: 'Four' }
-   ]
+    type: 'group', name: 'group1', items: [
+      { value: 'three', label: 'Three', className: 'myOptionClassName' },
+      { value: 'four', label: 'Four' }
+    ]
   },
   {
-   type: 'group', name: 'group2', items: [
-     { value: 'five', label: 'Five' },
-     { value: 'six', label: 'Six' }
-   ]
+    type: 'group', name: 'group2', items: [
+      { value: 'five', label: 'Five' },
+      { value: 'six', label: 'Six' }
+    ]
   }
 ];
 const RequireMentCard = ({
@@ -50,7 +50,7 @@ const RequireMentCard = ({
       <div className=" px-[1em] py-[2rem] ">
         <p className="text-pri_var_1 font-[700] text-[40px]">{title}</p>
       </div>
-      
+
       <div className="bg-white leading-10 text-p_gray text-justify  font-[600] text-[20px]">
         <p>{details}</p>
       </div>
@@ -61,31 +61,31 @@ const RequireMentCard = ({
 
 const Requirement = () => {
   return (
-    <div>  
-    <div className="lg:px-[5em] md:px-[3em] px-[1em]">
-      <div
-        className="
+    <div>
+      <div className="lg:px-[5em] md:px-[3em] px-[1em]">
+        <div
+          className="
       text-center mb-[2em] lg:w-[50%] md:w-[60%] w-[80%] mx-auto">
-        {/* <p className="text-pri text-[70px] font-[600] "> Membership Requirements </p> */}
+          {/* <p className="text-pri text-[70px] font-[600] "> Membership Requirements </p> */}
 
-      </div>
-      <div className="grid lg:grid-cols-1 gap-[3em] md:grid-cols-2 grid-cols-1 ">
-        {data.map((item, index) => (
-          <RequireMentCard
-            key={index}
-            title={item.title}
-            details={item.details}
-            type={item.type}
-          />
-        ))}
-      </div>
-{/* <div className=" w-[90%] items-center flex-1 rounded-lg ml-10 mt-10  ">
-<Dropdown className=" rounded-lg" options={options}   placeholder="Select an option" 
+        </div>
+        <div className="grid lg:grid-cols-1 gap-[3em] md:grid-cols-2 grid-cols-1 ">
+          {data.map((item, index) => (
+            <RequireMentCard
+              key={index}
+              title={item.title}
+              details={item.details}
+              type={item.type}
+            />
+          ))}
+        </div>
+        {/* <div className=" w-[90%] items-center flex-1 rounded-lg ml-10 mt-10  ">
+<Dropdown className=" rounded-lg" options={options}   placeholder="Select an option"
   arrowClosed={<span className="arrow-closed" />}
   arrowOpen={<span className="arrow-open" />}/>
 </div> */}
 
-    </div>
+      </div>
     </div>
   );
 };
