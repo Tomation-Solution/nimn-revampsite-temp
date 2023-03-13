@@ -1,4 +1,4 @@
-import { EventDetailsShowCase } from '@/components';
+import { EventDetailsShowCase, EventDetailsShowCard } from '@/components';
 import { Eventdata } from '@/components/Events/Events';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { ParsedUrlQuery } from 'querystring';
@@ -21,6 +21,14 @@ function EventDetails({ event }: EventProps) {
     return (
         <div className=''>
             <EventDetailsShowCase />
+            {event.map((item, index) => (
+                <EventDetailsShowCard
+                    key={index}
+                    title={item.title}
+                    details={item.details}
+                    type={item.type}
+                />
+            ))}
         </div>
     );
 }

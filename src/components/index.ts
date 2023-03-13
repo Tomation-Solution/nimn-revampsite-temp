@@ -22,6 +22,8 @@ export { default as  EventsShowCase } from './Events/Showcase';
 export { default as  EventsConfrence } from './Events/NInmConfrence'
 export { default as  Event } from './Events/Events'
 export { default as  EventDetailsShowCase } from './Events/Details/ShowDetails'
+export { default as  EventDetailsShowCard } from './Events/Details/EventDetailsCard'
+
 
 
 
