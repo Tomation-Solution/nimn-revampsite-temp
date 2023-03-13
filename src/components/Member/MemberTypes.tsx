@@ -38,7 +38,7 @@ const data = [
     img: span,
   },
   {
-    title: "»Associate Member",
+    title: "Associate Member",
     body: "As an Associate Member, if he has attained the age of 23 years and is employed in an management capacity in a marketing or related organization, and has passed examinations accepted by the Institute and is otherwise a fit and proper person to be enrolled in the Register;",
     link: "/",
     img: span,
@@ -67,8 +67,8 @@ const SpotLightCard = ({
                 />
                 </div>
       <div className="flex flex-col gap-y-[1em] mt-10 text-center  bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
-        <p className="text-pri_var_2 text-[20px] font-[600]">{title}</p>
-        <p className="text-[15px] text-p_gray">{body}</p>
+        <p className="text-pri_var_1 text-[25px] font-[700]">{title}</p>
+        <p className="text-[20px] text-p_gray">{body}</p>
         <a className="text-pri_var_1 font-[600] text-[16px]" href={link}>
           Read More
         </a>

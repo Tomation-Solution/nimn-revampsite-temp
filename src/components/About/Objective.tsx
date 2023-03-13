@@ -81,7 +81,7 @@ const NIMNObjective = () => {
     return (
         <div className="md:px-[5em] p-[1em] md:my-[8em] mt-6">
             <div className="flex  flex-col justify-center my-[3em] gap-6">
-                {/* <p className="text-[42px] font-[700] text-pri text-center"> Member’s NIMNObjective </p> */}
+                <p className="text-[42px] font-[700] text-pri text-center"> Key Objectives of the NIMN</p>
             </div>
             <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
                 {data.map((item, index) => (

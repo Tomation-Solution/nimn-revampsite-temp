@@ -88,53 +88,53 @@ const SpotLightCard = ({
       <div className="flex flex-col  lg:gap-2 gap-1 text-center  bg-white rounded-md px-[1.5em] py-[2em] ">
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#00FF00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#00FF00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#ff2f00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
 
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#00FF00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#00FF00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#00FF00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#00FF00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#00FF00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#00FF00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
         <div className=" flex  gap-4 flex-row items-center w-full  ">
           <BsCheckCircle color={"#00FF00"} />
-          <p className="text-[15px] text-center text-p_gray">{body}</p>
+          <p className="text-[18px] text-center text-p_gray">{body}</p>
         </div>
         <hr />
       </div>

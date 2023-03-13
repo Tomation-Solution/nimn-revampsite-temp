@@ -51,7 +51,7 @@ const RequireMentCard = ({
         <p className="text-pri_var_1 font-[700] text-[40px]">{title}</p>
       </div>
       
-      <div className="bg-white leading-10 text-p_gray text-justify  font-[600] text-[18px]">
+      <div className="bg-white leading-10 text-p_gray text-justify  font-[600] text-[20px]">
         <p>{details}</p>
       </div>
 

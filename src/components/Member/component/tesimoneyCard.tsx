@@ -19,9 +19,9 @@ const EmblaCarousel = (props:any) => {
 
               <p className={`${classes.embla__slide__content} text-center text-white font-bold lg:px-40 px-0  lg:mt-20 mt-0`}>
                 <span className=' lg:text-2xl text-center text-sm'>{description.description}</span>
-                <span className=' lg:text-xl text-sm'>{description.des}</span>
-                <span className=' lg:text-xl  text-sm'>{description.des2}</span>
-                <span className=' lg:text-xl text-p_gray text-sm'>{description.des3}</span> 
+                <span className=' lg:text-2xl text-sm'>{description.des}</span>
+                <span className=' lg:text-2xl  text-sm'>{description.des2}</span>
+                <span className=' lg:text-xl  text-sm'>{description.des3}</span> 
               </p>
             </div>
           ))}

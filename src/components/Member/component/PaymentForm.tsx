@@ -28,7 +28,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
       <Modal openNow={openNow} onClose={onClose}>
         <Dialog.Title
           as="h3"
-          className=" ml-80 mb-10 text-3xl text-center font-bold leading-6  flex items-center"
+          className=" lg:ml-80 ml-0 mb-10 text-3xl text-center font-bold leading-6  flex items-center"
         >
           Membership Registration
         </Dialog.Title>
@@ -88,7 +88,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
                   action=""
                   className="mt-6 mb-0  w-full space-y-4 rounded-lg p-8 shadow-2xl"
                 >
-                  <div className="   grid lg:grid-rows-1  md:grid-cols-2 grid-cols-1 gap-y-[5em] gap-x-5 pb-[1em] ">
+                  <div className="   grid lg:grid-rows-1  md:grid-cols-2 grid-cols-1 lg:gap-y-[5em] gap-y-[2em] gap-x-5 pb-[1em] ">
                     <div className="relative mt-1">
                       <label htmlFor="email" className="sr-only text-lg">
                         {" "}
@@ -169,7 +169,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
                       />
                     </div>
                   </div>
-                  <div className="  grid lg:grid-rows-1  md:grid-cols-2 grid-cols-1 gap-y-[5em] gap-x-5 pb-[1em]">
+                  <div className="  grid lg:grid-rows-1  md:grid-cols-2 grid-cols-1 lg:gap-y-[5em] gap-y-[2em] gap-x-5 pb-[1em]">
                     <div className="relative mt-1">
                       <label
                         htmlFor="userLastName"
@@ -215,7 +215,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
                     </div>
                   </div>
 
-                  <div className="grid lg:grid-rows-1  md:grid-cols-2 grid-cols-1 gap-y-[10em] gap-x-10 pb-[1em] ">
+                  <div className="grid lg:grid-rows-1  md:grid-cols-2 grid-cols-1 lg:gap-y-[10em] gap-y-[2em] gap-x-10 pb-[1em] ">
                     <div className="relative mt-1">
                       <label htmlFor="password" className="sr-only text-lg">
                         Password
@@ -235,7 +235,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
                         />
                       </div>
                     </div>
-                    <div className=" border-4 w-[453px] flex justify-center items-center flex-col  border-dashed	 h-[210px]">
+                    <div className=" border-4 lg:w-[453px] w-full px-6 flex justify-center items-center flex-col  border-dashed	 h-[210px]">
                       <p className=" text-center">
                         {" "}
                         Upload Image in passport photo size (600 X 600){" "}
@@ -271,7 +271,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
                     </div>
                   </div>
 
-                  <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-[10em] gap-x-10 pb-[1em]  ">
+                  <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-y-[10em] gap-y-[2em]  gap-x-10 pb-[1em]  ">
                     <div className="relative mt-1">
                       <label
                         htmlFor="confirmPassword"
@@ -345,7 +345,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
                     <button
                       disabled={isSubmitting}
                       type="submit"
-                      className="block w-96 rounded-lg bg-pri_var_2 px-5 py-3 text-base font-medium text-white"
+                      className="block lg:w-96 w-full rounded-lg bg-pri_var_2 px-5 py-3 text-base font-medium text-white"
                     >
                       {" "}
                       Make Payment
