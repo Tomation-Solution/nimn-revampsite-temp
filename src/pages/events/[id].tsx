@@ -21,14 +21,14 @@ function EventDetails({ event }: EventProps) {
     return (
         <div className=''>
             <EventDetailsShowCase />
-            {event.map((item, index) => (
+           
                 <EventDetailsShowCard
-                    key={index}
-                    title={item.title}
-                    details={item.details}
-                    type={item.type}
+                    key={event?.id}
+                    title={event.title}
+                    description={event.description}
+                    type={event.type}
                 />
-            ))}
+          
         </div>
     );
 }
