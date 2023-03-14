@@ -21,14 +21,15 @@ function EventDetails({ event }: EventProps) {
     return (
         <div className=''>
             <EventDetailsShowCase />
-           
-                <EventDetailsShowCard
-                    key={event?.id}
-                    title={event.title}
-                    description={event.description}
-                    type={event.type}
-                />
-          
+
+            <EventDetailsShowCard
+                key={event?.id}
+                title={event?.title ?? 'Default Title'}
+                description={event?.description ?? 'Default Description'}
+                type={event?.type ?? 'Default Type'}
+
+            />
+
         </div>
     );
 }
