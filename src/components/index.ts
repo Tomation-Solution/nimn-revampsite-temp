@@ -19,13 +19,23 @@ export { default as NIMNAct } from './About/NimnAct'
 export { default as CouncilMember } from './About/CouncilMemeber'
 export { default as Disciplinary } from './About/Disciplinary'
 export { default as  EventsShowCase } from './Events/Showcase';
-export { default as  EventsConfrence } from './Events/NInmConfrence'
-export { default as  Event } from './Events/Events'
-export { default as  EventDetailsShowCase } from './Events/Details/ShowDetails'
-export { default as  EventDetailsShowCard } from './Events/Details/EventDetailsCard'
-export { default as  EventPricing } from './Events/Details/EventPricing'
-export { default as  InsightShowcase } from './Insight/Showcase'
-export { default as  Insight } from './Insight/Insights'
+export { default as  EventsConfrence } from './Events/NInmConfrence';
+export { default as  Event } from './Events/Events';
+export { default as  EventDetailsShowCase } from './Events/Details/ShowDetails';
+export { default as  EventDetailsShowCard } from './Events/Details/EventDetailsCard';
+export { default as  EventPricing } from './Events/Details/EventPricing';
+export { default as  InsightShowcase } from './Insight/Showcase';
+export { default as  Insight } from './Insight/Insights';
+export { default as  InsightDetailsShowCard } from './Insight/component/InsightDetailsShowCard'
+export { default as  InsightDetailsShowCase } from './Insight/component/InsightDetailsShowCase'
+export { default as  CertShowcase } from './Certification/certShowcase'
+export { default as CertificateBenefit } from './Certification/CertificationBenefit'
+export { default as CertificateLevel } from './Certification/certificateLevels'
+
+
+
+
+
 
 
 

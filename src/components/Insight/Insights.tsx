@@ -104,7 +104,7 @@ export const Insightdata = [
     },
 ];
 
-const InsightCard = ({
+ export const InsightCard = ({
     title,
     description,
     date,
@@ -119,13 +119,13 @@ const InsightCard = ({
         <div>
             <div className="border-l-4 px-10 flex flex-row border-pri_var_2 ">
                 <div className="flex items-center flex-col gap-10">
-                <p className="text-[20px] font-[600] ">{description}</p>
-                <p className="text-p_gray text-[14px] ">{date}</p>
-                <p className="text-p_gray text-[14px] ">{type}</p>
+                    <p className="text-[20px] font-[600] ">{description}</p>
+                    <p className="text-p_gray text-[14px] ">{date}</p>
+                    <p className="text-p_gray text-[14px] ">{type}</p>
                 </div>
 
             </div>
-            </div>
+        </div>
 
     );
 };
@@ -147,14 +147,14 @@ const Insights = () => {
             </div>
 
             <div className="grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 ">
-                {Insightdata.map((event, index) => (
-                    <Link key={index} href={`/Insights/${event.id}`}>
+                {Insightdata.map((Insight, index) => (
+                    <Link key={index} href={`/Insight/${Insight.id}`}>
                         <InsightCard
                             key={index}
-                            title={event.title}
-                            description={event.description}
-                            date={event.date}
-                            type={event.type}
+                            title={Insight.title}
+                            description={Insight.description}
+                            date={Insight.date}
+                            type={Insight.type}
                         />
                     </Link>
                 ))}

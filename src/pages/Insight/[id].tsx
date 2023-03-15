@@ -1,4 +1,4 @@
-import { InsightDetailsShowCase, InsightDetailsShowCard, } from '@/components';
+import { InsightDetailsShowCase, InsightDetailsShowCard, Insight } from '@/components';
 import { Insightdata } from '@/components/Insight/Insights';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { ParsedUrlQuery } from 'querystring';
@@ -21,12 +21,12 @@ function InsightDetails({ Insight }: InsightProps) {
     return (
         <div className=''>
             <InsightDetailsShowCase />
-
             <InsightDetailsShowCard
                 key={Insight?.id}
+                date={Insight?.date ?? 'Default Date'}
                 title={Insight?.title ?? 'Default Title'}
                 description={Insight?.description ?? 'Default Description'}
-                type={Insight?.type ?? 'Default Type'}/>
+                type={Insight?.type ?? 'Default Type'} />
         </div>
     );
 }

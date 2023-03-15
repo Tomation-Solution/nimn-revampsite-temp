@@ -1,0 +1,105 @@
+import React from "react";
+import { AiOutlineCalendar } from "react-icons/ai";
+import showcase_bg from "../../../public/images/showcase_bg.jpg";
+import grad from "../../../public/images/grad.jpeg";
+import guy from "../../../public/images/guy.jpeg";
+import span from "../../../public/images/span.png";
+import Image from "next/image";
+
+const data = [
+    {
+        img: span,
+        title: "Corporate Membership",
+        body: "Corporate Membership is open to companies which produce or market goods and or services in Nigeria, which at the date of application, employ not less than 25 persons and satisfy the rules and regulation of the Institute.",
+        link: "/",
+    },
+    {
+        img: span,
+        title: "Individual Membership",
+        body: "Membership of the National Institute of Marketing of Nigeria (NIMN) allows members to affix the initials, animn, mnimn, fnimn to their names. This gives a certain identity and visibility to members’ professional status.",
+        link: "/",
+    },
+    {
+        img: span,
+        title: "Full membership",
+        body: "As a Full Member, if he has attained the age of 25 years and has been an Associate Member for a period not less than 5 years immediately preceding the date of application in that behalf and has been enrolled as an associate member or has been exempted from this requirement by the Council and is otherwise fir and proper person",
+        link: "/",
+    },
+    {
+        title: "Membership through Examination",
+        body: "Membership of the Institute can also be achieved through successfully passing the qualifying examinations leading to the award of either the Chartered Graduate Diploma in Marketing or Chartered Post Graduate Diploma in Marketing.",
+        link: "/",
+        img: span,
+    },
+    {
+        title: "Fellow Member",
+        body: "As a fellow, if he satisfy the Council that he has attained the age of 35 years and that for the period of 5 years immediately preceding the date of application in that behalf has been fit and proper person, and in addition he is the holder of an approved academic qualification and has creditably held a senior management position in a marketing or related organization,",
+        link: "/",
+        img: span,
+    },
+    {
+        title: "Associate Member",
+        body: "As an Associate Member, if he has attained the age of 23 years and is employed in an management capacity in a marketing or related organization, and has passed examinations accepted by the Institute and is otherwise a fit and proper person to be enrolled in the Register;",
+        link: "/",
+        img: span,
+    },
+
+];
+
+
+const SpotLightCard = ({
+    img,
+    title,
+    body,
+    link,
+}: {
+    img: any;
+    title: string;
+    body: string;
+    link: string;
+}) => {
+    return (
+        <div className="relative flex flex-col items-center">
+            <div className="jusify-center">
+                <Image width={80} height={80} src={img} alt={title}
+                    quality={100}
+                    className=' '
+                />
+            </div>
+            <div className="flex flex-col gap-y-[1em] mt-10 text-center  bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
+                <p className="text-pri_var_1 text-[25px] font-[700]">{title}</p>
+                <p className="text-[20px] text-p_gray">{body}</p>
+                <a className="text-pri_var_1 font-[600] text-[16px]" href={link}>
+                    Read More
+                </a>
+            </div>
+        </div>
+    );
+};
+
+const CertificateLevels = () => {
+    return (
+        <div className="md:px-[5em] p-[1em] md:my-[8em] mt-6">
+            <div className="flex  flex-col justify-center my-[3em] gap-6">
+                {/* <p className="text-[42px] font-[700] text-pri text-center"> Member’s Spotlight </p> */}
+            </div>
+            <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
+                {data.map((item, index) => (
+                    <SpotLightCard
+                        key={index}
+                        img={item.img}
+                        title={item.title}
+                        body={item.body}
+                        link={item.link}
+                    />
+                ))}
+            </div>
+            <div className="mt-5 flex justify-center items-center">
+                <button className=" justify-center items-center text-white bg-pri_var_2 w-[116px] h-[59px] font-normal text-lg"> see more </button>
+
+            </div>
+        </div>
+    );
+};
+
+export default CertificateLevels;
