@@ -33,7 +33,7 @@ const navData = [
     name: "Photos",
   },
   {
-    url: "/insight",
+    url: "/Insight",
     name: "Insight",
   },
   {
@@ -75,9 +75,8 @@ const Header = () => {
       </div>
 
       <div
-        className={`md:flex  md:flex-row flex-col md:justify-between text-center gap-y-[1rem] lg:px-[15em] md:px-[10em] py-[1em]  ${
-          showMenu ? "flex " : "hidden"
-        }`}
+        className={`md:flex  md:flex-row flex-col md:justify-between text-center gap-y-[1rem] lg:px-[15em] md:px-[10em] py-[1em]  ${showMenu ? "flex " : "hidden"
+          }`}
       >
         {navData.map((item, index) => (
           <NavButton key={index} name={item.name} url={item.url} />

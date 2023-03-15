@@ -1,4 +1,4 @@
-import { EventDetailsShowCase, EventDetailsShowCard,EventPricing } from '@/components';
+import { EventDetailsShowCase, EventDetailsShowCard, EventPricing } from '@/components';
 import { Eventdata } from '@/components/Events/Events';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { ParsedUrlQuery } from 'querystring';
@@ -26,9 +26,8 @@ function EventDetails({ event }: EventProps) {
                 key={event?.id}
                 title={event?.title ?? 'Default Title'}
                 description={event?.description ?? 'Default Description'}
-                type={event?.type ?? 'Default Type'}
-            />
-        <EventPricing/>
+                type={event?.type ?? 'Default Type'} />
+            <EventPricing />
         </div>
     );
 }
