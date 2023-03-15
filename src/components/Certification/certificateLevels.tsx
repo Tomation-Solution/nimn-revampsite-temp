@@ -6,6 +6,8 @@ import guy from "../../../public/images/guy.jpeg";
 import span from "../../../public/images/span.png";
 import Image from "next/image";
 
+
+
 const data = [
     {
         img: span,
@@ -81,7 +83,6 @@ const CertificateLevels = () => {
     return (
         <div className="md:px-[5em] p-[1em] md:my-[8em] mt-6">
             <div className="flex  flex-col justify-center my-[3em] gap-6">
-                {/* <p className="text-[42px] font-[700] text-pri text-center"> Member’s Spotlight </p> */}
             </div>
             <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
                 {data.map((item, index) => (
@@ -96,7 +97,6 @@ const CertificateLevels = () => {
             </div>
             <div className="mt-5 flex justify-center items-center">
                 <button className=" justify-center items-center text-white bg-pri_var_2 w-[116px] h-[59px] font-normal text-lg"> see more </button>
-
             </div>
         </div>
     );
