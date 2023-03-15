@@ -10,21 +10,21 @@ import PaymrntFormModal from "./component/PaymentForm";
 const data = [
   {
     img: showcase_bg,
-    title: "PLATINUM",
+    title: "individual membership",
     body: "he professional qualifications in marketing provide",
     link: "/",
     amount: "500",
   },
   {
     img: grad,
-    title: "Gold",
+    title: "Corporate Membership  ",
     body: "he professional qualifications in marketing provide",
     link: "/",
     amount: "400",
   },
   {
     img: guy,
-    title: "Silver",
+    title: "Membership through Examination",
     body: "he professional qualifications in marketing provide",
     link: "/",
     amount: "300",
@@ -32,24 +32,24 @@ const data = [
 
   {
     img: guy,
-    title: "Bronze",
+    title: "Membership Upgrade",
     body: "he professional qualifications in marketing provide",
     link: "/",
     amount: "250",
   },
-  {
-    img: guy,
-    title: "Professional",
-    body: "he professional qualifications in marketing provide",
-    link: "/",
-    amount: "200",
-  },
-  {
-    title: "Regular",
-    body: "he professional qualifications in marketing provide",
-    link: "/",
-    amount: "100",
-  },
+  // {
+  //   img: guy,
+  //   title: "Professional",
+  //   body: "he professional qualifications in marketing provide",
+  //   link: "/",
+  //   amount: "200",
+  // },
+  // {
+  //   title: "Regular",
+  //   body: "he professional qualifications in marketing provide",
+  //   link: "/",
+  //   amount: "100",
+  // },
 ];
 
 const SpotLightCard = ({

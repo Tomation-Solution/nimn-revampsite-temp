@@ -117,7 +117,6 @@ const EventCard = ({
 }) => {
     return (
         <div>
-
             <div className="bg-pri_var_2 text-white">
                 <p className="font-[700] text-[42px] p-[2em]">{title}</p>
             </div>
