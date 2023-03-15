@@ -64,7 +64,10 @@ const Header = () => {
         <div className="flex">
           <Image alt="search" src={search} height={60} width={60} />
           <Image alt="join" src={join} height={60} width={60} />
-          <Image alt="login" src={login} height={60} width={60} />
+          <a href="https://members.nimn.com.ng/">
+            {" "}
+            <Image alt="login" src={login} height={60} width={60} />
+          </a>
           <button
             onClick={() => setShowMenu(!showMenu)}
             className="md:hidden inline text-[34px] "
@@ -75,8 +78,9 @@ const Header = () => {
       </div>
 
       <div
-        className={`md:flex  md:flex-row flex-col md:justify-between text-center gap-y-[1rem] lg:px-[15em] md:px-[10em] py-[1em]  ${showMenu ? "flex " : "hidden"
-          }`}
+        className={`md:flex  md:flex-row flex-col md:justify-between text-center gap-y-[1rem] lg:px-[15em] md:px-[10em] py-[1em]  ${
+          showMenu ? "flex " : "hidden"
+        }`}
       >
         {navData.map((item, index) => (
           <NavButton key={index} name={item.name} url={item.url} />

@@ -7,7 +7,6 @@ import span from "../../../public/images/span.png";
 import Image from "next/image";
 
 const data = [
-
   {
     img: span,
     title: "Full membership",
@@ -27,9 +26,7 @@ const data = [
     link: "/",
     img: span,
   },
-
 ];
-
 
 const SpotLightCard = ({
   img,
@@ -43,11 +40,15 @@ const SpotLightCard = ({
   link: string;
 }) => {
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex flex-col items-center ">
       <div className="jusify-center">
-        <Image width={80} height={80} src={img} alt={title}
+        <Image
+          width={80}
+          height={80}
+          src={img}
+          alt={title}
           quality={100}
-          className=' '
+          className=" "
         />
       </div>
       <div className="flex flex-col gap-y-[1em] mt-10 text-center  bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
@@ -79,8 +80,10 @@ const SpotLight = () => {
         ))}
       </div>
       <div className="mt-5 flex justify-center items-center">
-        <button className=" justify-center items-center text-white bg-pri_var_2 w-[116px] h-[59px] font-normal text-lg"> see more </button>
-
+        <button className=" justify-center items-center text-white bg-pri_var_2 w-[116px] h-[59px] font-normal text-lg">
+          {" "}
+          see more{" "}
+        </button>
       </div>
     </div>
   );

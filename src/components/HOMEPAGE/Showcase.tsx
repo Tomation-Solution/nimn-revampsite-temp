@@ -33,12 +33,13 @@ const Showcase = () => {
     >
       <div className="lg:w-[40%] md:w-[60%] w-[90%] flex flex-col gap-y-[2em] items-center text-center">
         <p className="md:text-[48px] text-[34px] text-white font-[800]">
-          NIMN Introduces group life protection  insurance <br/> for members
+          NIMN Introduces group life protection insurance <br /> for members
         </p>
-
-        <button className="bg-pri_var_1 rounded-md text-white md:text-[24px] text-[18px] px-[1em] py-[1.2em] hover:bg-pri animate-all duration-300">
-          Become A Member
-        </button>
+        <a href="https://members.nimn.com.ng/">
+          <button className="bg-pri_var_1 rounded-md text-white md:text-[24px] text-[18px] px-[1em] py-[1.2em] hover:bg-pri animate-all duration-300">
+            Become A Member
+          </button>
+        </a>
       </div>
 
       <div

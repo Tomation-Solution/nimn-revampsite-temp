@@ -5,9 +5,15 @@ import profile from "../../../public/images/Rectangle_7.png";
 const Profile = () => {
   return (
     <div className="flex justify-around lg:flex-row flex-col items-center md:gap-x-[3em] gap-y-[1em] md:px-[6em] px-[1em] md:my-[10rem] my-[6rem]">
-      <Image src={profile} alt="Profile" width={900} height={200} />
+      <Image
+        src={profile}
+        alt="Profile"
+        width={900}
+        height={200}
+        className="flex-1 "
+      />
 
-      <div className="flex flex-col gap-y-5 w-[400]">
+      <div className="flex flex-col gap-y-5 w-[400] flex-1">
         <p className="md:text-[42px] text-[32px] font-[600] text-pri">
           National Institute of Marketing of Nigeria (NIMN)
         </p>
