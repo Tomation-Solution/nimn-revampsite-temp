@@ -24,6 +24,10 @@ export { default as  Event } from './Events/Events'
 export { default as  EventDetailsShowCase } from './Events/Details/ShowDetails'
 export { default as  EventDetailsShowCard } from './Events/Details/EventDetailsCard'
 export { default as  EventPricing } from './Events/Details/EventPricing'
+export { default as  InsightShowcase } from './Insight/Showcase'
+export { default as  Insight } from './Insight/Insights'
+
+
 
 
 

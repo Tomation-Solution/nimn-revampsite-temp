@@ -33,7 +33,7 @@ const navData = [
     name: "Photos",
   },
   {
-    url: "/insight",
+    url: "/Insight",
     name: "Insight",
   },
   {
