@@ -65,8 +65,8 @@ const InsightCard = ({
           <p className="text-p_gray text-[12px] ">EVENT</p>
         </div>
         <p className="text-[20px] font-[600] text-white ">{description}</p>
-        <p className="text-p_gray text-[14px]text-white ">{date}</p>
-        <p className="text-p_gray text-[14px] ">{type}</p>
+        <p className="text-white font-bold text-[14px]text-white ">{date}</p>
+        <p className="text-white font-bold text-[14px] ">{type}</p>
       </div>
     </div>
   );

@@ -66,6 +66,16 @@ const ProgramsCard = ({
 const Programs = () => {
   return (
     <div className="bg-pri_var_2 lg:p-[10em] md:p-[6em] p-[2em]">
+      <div className="text-white  pb-[5em] text-center">
+        <p className="md:text-[42px] text-[32px] font-[600] text-pri_var_1">
+          National Institute of Marketing of Nigeria (NIMN)
+        </p>
+        <p className="md:text-[24px] text-[18px]">
+          This is the body for marketing professionals engaged in marketing and
+          related fields as marketing practitioners, sales and marketing
+          directors, customer service managers, relationship directors...
+        </p>
+      </div>
       <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
         {data.map((item, index) => (
           <ProgramsCard

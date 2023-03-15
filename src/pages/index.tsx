@@ -23,9 +23,9 @@ export default function Home() {
       <HeadComponent pageName="HOME" />
       <main>
         <Showcase />
-        <div data-aos="fade-up">
+        {/* <div data-aos="fade-up">
           <Profile />
-        </div>
+        </div> */}
         <Programs />
         <Events />
         {/* <Meetings /> */}

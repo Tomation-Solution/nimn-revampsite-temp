@@ -4,7 +4,7 @@ import profile from "../../../public/images/Rectangle_6.png";
 
 const ProfileSection = () => {
   return (
-    <div className="flex md:gap-0 gap-10   items-center justify-center  md:px-[6em] px-[1em] md:my-[10rem] my-[6rem] flex-wrap relative">
+    <div className="flex md:gap-0 gap-10   items-center justify-center  md:px-[6em] px-[1em] md:mb-[10rem] my-[6rem] flex-wrap relative">
       <Image
         src={profile}
         alt="Profile"
