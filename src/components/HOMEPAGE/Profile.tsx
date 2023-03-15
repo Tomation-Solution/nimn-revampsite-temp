@@ -17,15 +17,15 @@ const Profile = () => {
         <p className="md:text-[42px] text-[32px] font-[600] text-pri">
           National Institute of Marketing of Nigeria (NIMN)
         </p>
-        <p className="md:text-[24px] text-p_gray text-[18px]">
+        <p className="md:text-[24px] text-[18px]">
           This is the body for marketing professionals engaged in marketing and
           related fields as marketing practitioners, sales and marketing
           directors, customer service managers, relationship directors...
         </p>
 
-        <button className="bg-pri_var_1 w-[211px] rounded-md text-white md:text-[24px] text-[18px] px-[1em] py-[1em] hover:bg-pri animate-all duration-300">
+        {/* <button className="bg-pri_var_1 w-[211px] rounded-md text-white md:text-[24px] text-[18px] px-[1em] py-[1em] hover:bg-pri animate-all duration-300">
           See full profile
-        </button>
+        </button> */}
       </div>
     </div>
   );

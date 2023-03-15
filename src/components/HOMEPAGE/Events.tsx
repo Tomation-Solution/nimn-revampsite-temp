@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const data = [
   {
@@ -10,14 +12,14 @@ const data = [
     type: "Virtual Conference",
   },
   {
-    title: "NIMN 2021 Annual Conference",
+    title: "NIMN 2022 Annual Conference",
     description:
       "The 2021 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
     date: "26th to 28th October, 2021",
     type: "Virtual Conference",
   },
   {
-    title: "NIMN 2021 Annual Conference",
+    title: "NIMN 2023 Annual Conference",
     description:
       "The 2021 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
     date: "26th to 28th October, 2021",
@@ -30,14 +32,24 @@ const EventCard = ({
   description,
   date,
   type,
+  index,
 }: {
   title: string;
   description: string;
   date: string;
   type: string;
+  index: number;
 }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div>
+    <div
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-delay={index * 400}
+      className="relative flex flex-col items-center"
+    >
       <div className="bg-pri_var_2 text-white">
         <p className="font-[700] text-[42px] p-[2em]">{title}</p>
       </div>
@@ -77,6 +89,7 @@ const Events = () => {
             description={event.description}
             date={event.date}
             type={event.type}
+            index={index}
           />
         ))}
       </div>

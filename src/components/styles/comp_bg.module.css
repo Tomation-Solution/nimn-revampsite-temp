@@ -1,6 +1,6 @@
 .showcase {
   background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
-    url("../../../public/images/Rectangle_11.png");
+    url("../../../public/images/bg_1.jpg");
 
   background-position: center;
   background-repeat: no-repeat;
@@ -105,11 +105,13 @@
   pointer-events: none;
 }
 
-.embla__slide__number>span {
+.embla__slide__number > span {
   color: var(--brand-primary);
-  background-image: linear-gradient(45deg,
-      var(--brand-primary),
-      var(--brand-secondary));
+  background-image: linear-gradient(
+    45deg,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

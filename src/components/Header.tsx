@@ -42,10 +42,20 @@ const navData = [
   },
 ];
 
-const NavButton = ({ name, url }: { name: string; url: string }) => {
+const NavButton = ({
+  name,
+  url,
+  setShowMenu,
+  showMenu,
+}: {
+  name: string;
+  url: string;
+  setShowMenu: any;
+  showMenu: any;
+}) => {
   return (
-    <Link href={url}>
-      <p className="font-[600] text-p_gray hover:text-pri">{name}</p>
+    <Link onClick={() => setShowMenu(!showMenu)} href={url}>
+      <p className=" text-pri font-bold hover:text-pri">{name.toUpperCase()}</p>
     </Link>
   );
 };
@@ -78,12 +88,18 @@ const Header = () => {
       </div>
 
       <div
-        className={`md:flex  md:flex-row flex-col md:justify-between text-center gap-y-[1rem] lg:px-[15em] md:px-[10em] py-[1em]  ${
+        className={`md:flex  md:flex-row md:justify-end lg:px-[10em] md:px-[5em] flex-col md:gap-x-[1.2em]  gap-y-[1rem]  py-[1em]  ${
           showMenu ? "flex " : "hidden"
         }`}
       >
         {navData.map((item, index) => (
-          <NavButton key={index} name={item.name} url={item.url} />
+          <NavButton
+            key={index}
+            name={item.name}
+            url={item.url}
+            setShowMenu={setShowMenu}
+            showMenu={showMenu}
+          />
         ))}
       </div>
     </>

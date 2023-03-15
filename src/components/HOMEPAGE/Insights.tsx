@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import classes from "../styles/comp_bg.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const data = [
   {
@@ -34,14 +36,23 @@ const InsightCard = ({
   description,
   date,
   type,
+  index,
 }: {
   title: string;
   description: string;
   date: string;
   type: string;
+  index: number;
 }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div>
+    <div
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-delay={index * 400}
+    >
       <div className={`bg-white ${classes.about} h-[15em] `}></div>
       <div className="p-3 mb-[1em] bg-white">
         <p className="font-[700] text-[25px] text-black ">{title}</p>
@@ -81,6 +92,7 @@ const Insights = () => {
             description={event.description}
             date={event.date}
             type={event.type}
+            index={index}
           />
         ))}
       </div>

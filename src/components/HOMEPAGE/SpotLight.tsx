@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import profile from "../../../public/images/profile.jpeg";
 import grad from "../../../public/images/grad.jpeg";
 import guy from "../../../public/images/guy.jpeg";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const data = [
   {
@@ -30,15 +32,25 @@ const SpotLightCard = ({
   img,
   title,
   body,
+  index,
   link,
 }: {
   img: any;
   title: string;
   body: string;
+  index: number;
   link: string;
 }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="relative flex flex-col items-center">
+    <div
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-delay={index * 400}
+      className="relative flex flex-col items-center"
+    >
       <Image width={500} height={500} src={img} alt={title} />
 
       <div className="flex flex-col gap-y-[1em] text-center absolute -bottom-[10em] bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
@@ -69,6 +81,7 @@ const SpotLight = () => {
             img={item.img}
             title={item.title}
             body={item.body}
+            index={index}
             link={item.link}
           />
         ))}
