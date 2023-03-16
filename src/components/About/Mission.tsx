@@ -5,7 +5,7 @@ import React from "react";
 const MissionSection = () => {
   return (
     <div className="flex gap-10 lg:flex-row lg:ml-20 flex-col items-center justify-between  lg:px-[6em] md:px-[3em] px-[1em] md:my-[10rem] my-[6rem]">
-      <div className=" shadow-xl  mt-20">
+      <div className=" shadow-xl ">
         <p className="md:text-[42px]  lg:text-[32px] text-[30px] mb-10  font-[700] text-center mt-10 text-pri">
           Our Mission
         </p>
@@ -19,7 +19,7 @@ const MissionSection = () => {
         </p>
       </div>
 
-      <div className=" shadow-xl mt-20 ">
+      <div className=" shadow-xl  ">
         <p className="md:text-[42px]  lg:text-[32px] text-[30px] mb-10  font-[700] text-center mt-10 text-pri">
           Our Vision
         </p>

@@ -14,7 +14,6 @@ function about() {
       {/* <AboutShowCase/> */}
       <ProfileSection />
       <MissionSection />
-      <NIMNObjective />
       <NIMNAct />
       <CouncilMember />
       <Disciplinary />

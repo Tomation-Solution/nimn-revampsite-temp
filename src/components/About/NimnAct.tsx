@@ -1,22 +1,32 @@
 import Image from "next/image";
-import React from "react";
-import profile from "../../../public/images/Rectangle_8.png";
-// import pdf from "../../../";
-// import pdf from '../../../public/images/ACT2003.pdf'
-import Link from "next/link";
+import React, { useEffect } from "react";
+import profile from "../../../public/images/profile.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import act2003 from "../../../public/images/";
 
 const NIMNAct = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="flex md:gap-0 gap-10   items-center justify-center  md:px-[6em] px-[1em] md:my-[10rem] my-[6rem] flex-wrap relative">
       <Image
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
         src={profile}
         alt="Profile"
-        width={900}
-        height={900}
+        width={600}
+        height={400}
         className="flex-1 width-auto"
       />
 
-      <div className="flex-1 md:sticky inline md:-ml-[4em] md:mt-[6em] shadow-slate-700 shadow-2xl">
+      <div
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-delay={400}
+        className="flex-1 md:sticky inline md:-ml-[4em] md:mt-[6em] shadow-slate-700 shadow-2xl"
+      >
         <div className="flex flex-col gap-y-5 bg-pri_var_2 items-center  ">
           <p className="md:text-[42px]  lg:text-[42px] text-[20]  font-[700]  lg:px-14 px-6    text-justify w-full  mt-10 text-pri_var_1 ">
             NIMN Act 2013
@@ -46,9 +56,11 @@ const NIMNAct = () => {
             need further clarification, you can reach out to the Institute or
             consult legal experts for advice.
           </p>
-          <button className=" justify-left items-left  text-white bg-pri_var_1 w-3/4 py-4 font-normal text-lg hover:bg-pri">
-            <Link href="/">Download the NIMN Act 2013 </Link>
-          </button>
+          <a className="w-full" href={act2003} download="ACT2003.pdf">
+            <button className=" justify-left items-left  text-white bg-pri_var_1 w-3/4 py-4 font-normal text-lg hover:bg-pri">
+              Download the NIMN Act 2013
+            </button>
+          </a>
         </div>
       </div>
     </div>
