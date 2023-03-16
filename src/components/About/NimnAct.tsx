@@ -9,6 +9,7 @@ const NIMNAct = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <div className="flex md:gap-0 gap-10   items-center justify-center  md:px-[6em] px-[1em] md:my-[10rem] my-[6rem] flex-wrap relative">
       <Image
@@ -56,7 +57,7 @@ const NIMNAct = () => {
             need further clarification, you can reach out to the Institute or
             consult legal experts for advice.
           </p>
-          <a className="w-full" href={act2003} download="ACT2003.pdf">
+          <a className="w-full">
             <button className=" justify-left items-left  text-white bg-pri_var_1 w-3/4 py-4 font-normal text-lg hover:bg-pri">
               Download the NIMN Act 2013
             </button>
