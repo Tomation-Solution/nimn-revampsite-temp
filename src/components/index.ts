@@ -31,3 +31,6 @@ export { default as InsightDetailsShowCase } from "./Insight/component/InsightDe
 export { default as CertShowcase } from "./Certification/certShowcase";
 export { default as CertificateBenefit } from "./Certification/CertificationBenefit";
 export { default as CertificateLevel } from "./Certification/certificateLevels";
+export { default as ContactForm } from "./ContactForm/form";
+export { default as ContactShowcase } from "./ContactForm/contactshowcase";
+
