@@ -1,27 +1,27 @@
 import React, { useEffect } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
-import profile from "../../../public/images/profile.jpeg";
-import grad from "../../../public/images/grad.jpeg";
-import guy from "../../../public/images/guy.jpeg";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import pic_1 from "../../../public/images/member.jpeg";
+import pic_2 from "../../../public/images/member_3.jpg";
+import pic_3 from "../../../public/images/member_5.jpg";
 
 const data = [
   {
-    img: profile,
+    img: pic_1,
     title: "Professional Qualifications in Marketing",
     body: "The professional qualifications in marketing provide holders with a …",
     link: "/",
   },
   {
-    img: grad,
+    img: pic_2,
     title: "NIMN Examination",
     body: "The professional examinations are conducted in designated examination …",
     link: "/",
   },
   {
-    img: guy,
+    img: pic_3,
     title: "Direct Membership Programme",
     body: "Membership through Fast Track Executive Membership …",
     link: "/",
@@ -51,7 +51,9 @@ const SpotLightCard = ({
       data-aos-delay={index * 400}
       className="relative flex flex-col items-center"
     >
-      <Image width={500} height={500} src={img} alt={title} />
+      <div className="w-[20em] h-[20em] overflow-hidden bg-pri">
+        <Image width={500} height={500} src={img} alt={title} />
+      </div>
 
       <div className="flex flex-col gap-y-[1em] text-center absolute -bottom-[10em] bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
         <p className="text-pri_var_2 text-[20px] font-[600]">{title}</p>
@@ -86,12 +88,12 @@ const SpotLight = () => {
           />
         ))}
       </div>
-      <div className="mt-5 flex justify-center items-center">
+      {/* <div className="mt-5 flex justify-center items-center">
         <button className=" justify-center items-center text-white bg-pri_var_2 w-[116px] h-[59px] font-normal text-lg">
           {" "}
           see more{" "}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

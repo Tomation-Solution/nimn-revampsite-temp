@@ -6,6 +6,7 @@ import search from "../../public/svgs/search.svg";
 import login from "../../public/svgs/login.svg";
 import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
+import PaymentFormModal from "./Member/component/PaymentForm";
 
 const navData = [
   {
@@ -62,8 +63,13 @@ const NavButton = ({
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isPaymentModalOpen, setPaymentModalOpen] = useState(false);
   return (
     <>
+      <PaymentFormModal
+        openNow={isPaymentModalOpen}
+        onClose={() => setPaymentModalOpen(false)}
+      />
       <div
         className=" mt-[.4em] px-[2em]
       flex justify-between items-center border-t-8 border-b-4 border-pri
@@ -73,7 +79,14 @@ const Header = () => {
 
         <div className="flex">
           <Image alt="search" src={search} height={60} width={60} />
-          <Image alt="join" src={join} height={60} width={60} />
+          <Image
+            onClick={() => setPaymentModalOpen(!isPaymentModalOpen)}
+            className="cursor-pointer"
+            alt="join"
+            src={join}
+            height={60}
+            width={60}
+          />
           <a href="https://members.nimn.com.ng/">
             {" "}
             <Image alt="login" src={login} height={60} width={60} />
@@ -86,7 +99,6 @@ const Header = () => {
           </button>
         </div>
       </div>
-
       <div
         className={`md:flex  md:flex-row md:justify-end lg:px-[10em] md:px-[5em] flex-col md:gap-x-[1.2em]  gap-y-[1rem]  py-[1em]  ${
           showMenu ? "flex " : "hidden"

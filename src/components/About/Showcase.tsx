@@ -31,8 +31,7 @@ const Showcase = () => {
     <div
       className={`h-[50em] ${classes.about} flex items-center justify-center relative mb-[2rem]`}
     >
-      <div className="lg:w-[40%] md:w-[60%] w-[90%] flex flex-col gap-y-[2em] items-center text-center">
-      </div>
+      <div className="lg:w-[40%] md:w-[60%] w-[90%] flex flex-col gap-y-[2em] items-center text-center"></div>
 
       <div
         className="absolute  md:p-[3em] p-[2em] rounded-md shadow-lg bg-white -bottom-[5em]

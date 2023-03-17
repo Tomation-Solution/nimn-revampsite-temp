@@ -1,29 +1,30 @@
 import React, { useEffect } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
-import showcase_bg from "../../../public/images/man_1.jpg";
-import grad from "../../../public/images/man_2.jpg";
-import guy from "../../../public/images/man_3.jpg";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import pic_1 from "../../../public/images/chairman.jpg";
+import pic_2 from "../../../public/images/member.jpeg";
+import pic_3 from "../../../public/images/member_6.jpg";
+
 const data = [
   {
-    img: showcase_bg,
-    title: "Myles Muroe",
-    body: "Has professional qualifications in marketing provide holders with a …",
+    img: pic_1,
+    title: "Dr. Ify Uraih",
+    body: "Chairman",
     link: "/",
   },
   {
-    img: grad,
-    title: "Bruno Ayo",
-    body: "Has professional examinations are conducted in designated examination …",
+    img: pic_3,
+    title: "Mrs. Adejoke Ishola",
+    body: "Council Member",
     link: "/",
   },
   {
-    img: guy,
-    title: "Dr. B A",
-    body: "Membership through Fast Track Executive Membership …",
+    img: pic_2,
+    title: "Mrs. Ebisan Onyenma",
+    body: "Council Member",
     link: "/",
   },
 ];
@@ -49,7 +50,7 @@ const DisciplinaryCard = ({
       data-aos="fade-up"
       data-aos-easing="ease-in-out"
       data-aos-delay={index * 400}
-      className="relative flex flex-col items-center"
+      className="relative flex flex-col items-center justify-end"
     >
       <Image width={500} height={500} src={img} alt={title} />
 
@@ -69,7 +70,7 @@ const Disciplinary = () => {
       <div className="flex  flex-col justify-center my-[3em] gap-6">
         <p className="text-[42px] font-[700] text-pri text-center">
           {" "}
-          NIMN Disciplinary{" "}
+          Disciplinary Tribunal
         </p>
         <p className=" text-center mb-14 md:text-[24px] font-medium">
           {" "}

@@ -57,7 +57,11 @@ const NIMNAct = () => {
             need further clarification, you can reach out to the Institute or
             consult legal experts for advice.
           </p>
-          <a className="w-full">
+          <a
+            href="https://drive.google.com/file/d/1Q6R_jzRweg5FFcY4h-J9gUS9KsJo9B4J/view?usp=sharing"
+            className="w-full"
+            target="_blank"
+          >
             <button className=" justify-left items-left  text-white bg-pri_var_1 w-3/4 py-4 font-normal text-lg hover:bg-pri">
               Download the NIMN Act 2013
             </button>

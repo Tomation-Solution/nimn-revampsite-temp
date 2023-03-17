@@ -50,34 +50,42 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
               confirmPassword: "",
             }}
             validate={(values) => {
-              const errors = {};
-              // if (!values.email) {
-              //     errors.email = 'Required';
-              // } else if (
-              //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-              // ) {
-              //     errors.email = 'Invalid email address';
-              // }
-              // if (!values.userFirstName) {
-              //     errors.userFirstName = 'Required';
-              // }
-              // if (!values.userLastName) {
-              //     errors.userLastName = 'Required';
-              // }
-              // if (!values.userName) {
-              //     errors.userName = 'Required';
-              // }
-              // if (!values.phoneNumber) {
-              //     errors.phoneNumber = 'Required';
-              // }
-              // if (!values.userPassword) {
-              //     errors.userPassword = 'Required';
-              // }
-              // if (!values.confirmPassword) {
-              //     errors.confirmPassword = 'Required';
-              // } else if (values.userPassword !== values.confirmPassword) {
-              //     errors.confirmPassword = 'Password does not match';
-              // }
+              const errors = {
+                email: "",
+                phoneNumber: "",
+                userFirstName: "",
+                userLastName: "",
+                userName: "",
+                userPassword: "",
+                confirmPassword: "",
+              };
+              if (!values.email) {
+                errors.email = "Required";
+              } else if (
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+              ) {
+                errors.email = "Invalid email address";
+              }
+              if (!values.userFirstName) {
+                errors.userFirstName = "Required";
+              }
+              if (!values.userLastName) {
+                errors.userLastName = "Required";
+              }
+              if (!values.userName) {
+                errors.userName = "Required";
+              }
+              if (!values.phoneNumber) {
+                errors.phoneNumber = "Required";
+              }
+              if (!values.userPassword) {
+                errors.userPassword = "Required";
+              }
+              if (!values.confirmPassword) {
+                errors.confirmPassword = "Required";
+              } else if (values.userPassword !== values.confirmPassword) {
+                errors.confirmPassword = "Password does not match";
+              }
               return errors;
             }}
             onSubmit={() => console.log("submitted")}
@@ -240,13 +248,20 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
                         {" "}
                         Upload Image in passport photo size (600 X 600){" "}
                       </p>
-                      <button className=" mt-10 bg-pri text-white w-[110px] rounded-md h-[50px] font-bold text-lg ">
+                      {/* <button className=" mt-10 bg-pri text-white w-[110px] rounded-md h-[50px] font-bold text-lg ">
                         {" "}
                         upload{" "}
-                      </button>
+                      </button> */}
+                      <input
+                        type="file"
+                        name="file"
+                        id="file"
+                        className="mt-10 bg-pri text-white w-full rounded-md h-[50px] font-bold text-lg  "
+                        // className=" mt-10 bg-pri text-white w-full rounded-md h-[50px] font-bold text-lg  "
+                      />
                     </div>
                   </div>
-                  <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-y-[10em] gap-x-10 pb-[1em]  ">
+                  {/* <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-y-[10em] gap-x-10 pb-[1em]  ">
                     <div className="relative mt-1">
                       <label
                         htmlFor="confirmPassword"
@@ -263,15 +278,15 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
                         />
 
                         <ErrorMessage
-                          className="text-lg text-error mt-1"
+                          className="text-lg text-red-300 mt-1"
                           name="confirmPassword"
                           component="div"
                         />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-y-[10em] gap-y-[2em]  gap-x-10 pb-[1em]  ">
+                  {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-y-[10em] gap-y-[2em]  gap-x-10 pb-[1em]  ">
                     <div className="relative mt-1">
                       <label
                         htmlFor="confirmPassword"
@@ -340,15 +355,16 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
                         />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="flex  flex-col gap-10 items-center justify-between">
                     <button
+                      onClick={onClose}
                       disabled={isSubmitting}
                       type="submit"
                       className="block lg:w-96 w-full rounded-lg bg-pri_var_2 px-5 py-3 text-base font-medium text-white"
                     >
                       {" "}
-                      Make Payment
+                      Join Now{" "}
                     </button>
                   </div>
                 </Form>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import profile from "../../../public/images/Rectangle_6.png";
+import profile from "../../../public/images/about_bg.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";

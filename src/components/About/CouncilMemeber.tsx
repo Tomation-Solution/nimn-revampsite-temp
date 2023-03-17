@@ -1,29 +1,29 @@
 import React, { useEffect } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
-import showcase_bg from "../../../public/images/man_1.jpg";
-import grad from "../../../public/images/man_2.jpg";
-import guy from "../../../public/images/man_3.jpg";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import pic_1 from "../../../public/images/chairman.jpg";
+import pic_2 from "../../../public/images/member_5.jpg";
+import pic_3 from "../../../public/images/member_4.jpg";
 
 const data = [
   {
-    img: guy,
-    title: "Dr. B A",
-    body: "Membership through Fast Track Executive Membership …",
+    img: pic_1,
+    title: "Dr. Ify Uraih",
+    body: "Chairman",
     link: "/",
   },
   {
-    img: grad,
-    title: "Bruno Ayo",
-    body: "Has professional examinations are conducted in designated examination …",
+    img: pic_3,
+    title: "Mr Walter Okafor",
+    body: "Council Member",
     link: "/",
   },
   {
-    img: showcase_bg,
-    title: "Myles Muroe",
-    body: "Has professional qualifications in marketing provide holders with a …",
+    img: pic_2,
+    title: "Mrs. Adenike Olufade",
+    body: "Council Member",
     link: "/",
   },
 ];
@@ -49,16 +49,16 @@ const CouncilMemberCard = ({
       data-aos="fade-up"
       data-aos-easing="ease-in-out"
       data-aos-delay={index * 400}
-      className="relative flex flex-col items-center"
+      className="relative flex flex-col items-center justify-end"
     >
       <Image width={500} height={500} src={img} alt={title} />
 
       <div className="flex shadow-xl flex-col gap-y-[1em] text-center absolute -bottom-[10em] bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
         <p className="text-pri_var_2 text-[20px] font-[600]">{title}</p>
         <p className="text-[15px] text-p_gray">{body}</p>
-        <a className="text-pri_var_1 font-[600] text-[16px]" href={link}>
+        {/* <a className="text-pri_var_1 font-[600] text-[16px]" href={link}>
           Read More
-        </a>
+        </a> */}
       </div>
     </div>
   );
