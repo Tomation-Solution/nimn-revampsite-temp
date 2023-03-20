@@ -32,7 +32,7 @@ const InsightCard = ({
       data-aos-delay={index * 400}
     >
       {/* <div className={`bg-white ${classes.about} h-[15em] `}></div> */}
-      <div className="pb-[.5em]">
+      <div className="pb-[.5em] overflow-hidden h-[15em] ">
         <Image src={image} alt="news image" width={700} height={400} />
       </div>
       <div className="p-3 mb-[1em] bg-white">
@@ -51,7 +51,7 @@ const InsightCard = ({
       </Link>
 
       <div className="text-white mt-[1em] font-semi-bold text-justify">
-        <p>{paragraphs[0].slice(0, 120)}</p>
+        <p>{paragraphs[0].slice(0, 130)}. . .</p>
       </div>
     </div>
   );

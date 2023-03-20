@@ -1,5 +1,6 @@
+import PaymentFormModal from "@/components/Member/component/PaymentForm";
 import TemplateContainer from "@/components/TemplateContainer";
-import React from "react";
+import React, { useState } from "react";
 
 const data = [
   {
@@ -69,48 +70,55 @@ const Paragraph = ({ item }: { item: any }) => {
 };
 
 const exam = () => {
+  const [isPaymentModalOpen, setPaymentModalOpen] = useState(false);
   return (
-    <TemplateContainer>
-      <>
-        <div>
-          <p className="md:text-[32px] text-[24px]  lg:text-[40px]  font-[700] w-full md:text-pri text-white  md:p-0  p-[.8em] md:bg-transparent  bg-pri">
-            Membership through Fast Track Executive
-          </p>{" "}
-          <p className="md:text-[32px] text-[24px]  lg:text-[40px]  font-[700] w-full md:text-pri text-white  md:p-0  p-[.8em] md:bg-transparent  bg-pri">
-            Membership Programme
-          </p>
+    <>
+      <PaymentFormModal
+        openNow={isPaymentModalOpen}
+        onClose={() => setPaymentModalOpen(false)}
+      />
+      <TemplateContainer>
+        <>
           <div>
-            {data.map((item, index) => {
-              return (
-                <div key={index}>
-                  <Paragraph item={item} />
-                </div>
-              );
-            })}
+            <p className="md:text-[32px] text-[24px]  lg:text-[40px]  font-[700] w-full md:text-pri text-white  md:p-0  p-[.8em] md:bg-transparent  bg-pri">
+              Membership through Fast Track Executive
+            </p>{" "}
+            <p className="md:text-[32px] text-[24px]  lg:text-[40px]  font-[700] w-full md:text-pri text-white  md:p-0  p-[.8em] md:bg-transparent  bg-pri">
+              Membership Programme
+            </p>
+            <div>
+              {data.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <Paragraph item={item} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-        <div>
-          <p className="md:text-[32px] text-[24px]  lg:text-[40px]  font-[700] w-full md:text-pri text-white  md:p-0  p-[.8em] md:bg-transparent  bg-pri">
-            Membership through Examination
-          </p>{" "}
           <div>
-            {data_2.map((item, index) => {
-              return (
-                <div key={index}>
-                  <Paragraph item={item} />
-                </div>
-              );
-            })}
-          </div>
-          <a href="https://members.nimn.com.ng/" className="w-full">
-            {" "}
-            <button className="bg-pri_var_2 text-white font-bold py-2 px-4 rounded hover:bg-pri_var_1 w-[60%]">
+            <p className="md:text-[32px] text-[24px]  lg:text-[40px]  font-[700] w-full md:text-pri text-white  md:p-0  p-[.8em] md:bg-transparent  bg-pri">
+              Membership through Examination
+            </p>{" "}
+            <div>
+              {data_2.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <Paragraph item={item} />
+                  </div>
+                );
+              })}
+            </div>
+            <button
+              onClick={() => setPaymentModalOpen(true)}
+              className="bg-pri_var_2 text-white font-bold py-2 px-4 rounded hover:bg-pri_var_1 w-[60%]"
+            >
               Become a member
             </button>
-          </a>
-        </div>
-      </>
-    </TemplateContainer>
+          </div>
+        </>
+      </TemplateContainer>
+    </>
   );
 };
 

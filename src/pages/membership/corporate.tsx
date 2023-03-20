@@ -1,5 +1,6 @@
+import PaymentFormModal from "@/components/Member/component/PaymentForm";
 import TemplateContainer from "@/components/TemplateContainer";
-import React from "react";
+import React, { useState } from "react";
 
 const data = [
   {
@@ -51,67 +52,74 @@ const Paragraph = ({ item }: { item: any }) => {
 };
 
 const corporate = () => {
+  const [isPaymentModalOpen, setPaymentModalOpen] = useState(false);
   return (
-    <TemplateContainer>
-      <div>
-        <p className="md:text-[32px] text-[24px]  lg:text-[40px]  font-[700]   text-justify w-full md:text-pri text-white  md:p-0  p-[.8em] md:bg-transparent  bg-pri">
-          Corporate Membership
-        </p>
-
+    <>
+      <PaymentFormModal
+        openNow={isPaymentModalOpen}
+        onClose={() => setPaymentModalOpen(false)}
+      />
+      <TemplateContainer>
         <div>
-          {data.map((item, index) => {
-            return (
-              <div key={index}>
-                <Paragraph item={item} />
-              </div>
-            );
-          })}
-          <p className="text-gray-600 font-medium text-justify leading-8 text-[18px] py-[10px] ">
-            Corporate Membership Application form: N10,000
-          </p>{" "}
-          <p className="text-gray-600 font-medium text-justify leading-8 text-[18px] py-[15px] ">
-            Annual Corporate Membership subscription
+          <p className="md:text-[32px] text-[24px]  lg:text-[40px]  font-[700]   text-justify w-full md:text-pri text-white  md:p-0  p-[.8em] md:bg-transparent  bg-pri">
+            Corporate Membership
           </p>
-          <table>
-            <thead>
-              <tr>
-                <th className="text-left text-gray-700 font-bold text-[18px] py-[10px]">
-                  Annual Turnover
-                </th>
-                <th className="text-left text-gray-700 font-bold text-[18px] py-[10px]">
-                  Annual Subscription
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="">
-                <td className="text-left text-gray-600 font-medium text-[18px] py-[10px]">
-                  Above N10billion in annual Turnover
-                </td>
-                <td className="text-left text-gray-600 font-medium text-[18px] py-[10px]">
-                  N500,000
-                </td>
-              </tr>
-              <tr>
-                <td className="text-left text-gray-600 font-medium text-[18px] py-[10px]">
-                  N10billion and Below in Annual Turnover
-                </td>
-                <td className="text-left text-gray-600 font-medium text-[18px] py-[10px]">
-                  N200,000
-                </td>
-              </tr>
-              <tr></tr>
-            </tbody>
-          </table>
-        </div>
-        <a href="https://members.nimn.com.ng/" className="w-full">
-          {" "}
-          <button className="bg-pri_var_2 text-white font-bold py-2 px-4 rounded hover:bg-pri_var_1 w-[60%]">
+
+          <div>
+            {data.map((item, index) => {
+              return (
+                <div key={index}>
+                  <Paragraph item={item} />
+                </div>
+              );
+            })}
+            <p className="text-gray-600 font-medium text-justify leading-8 text-[18px] py-[10px] ">
+              Corporate Membership Application form: N10,000
+            </p>{" "}
+            <p className="text-gray-600 font-medium text-justify leading-8 text-[18px] py-[15px] ">
+              Annual Corporate Membership subscription
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th className="text-left text-gray-700 font-bold text-[18px] py-[10px]">
+                    Annual Turnover
+                  </th>
+                  <th className="text-left text-gray-700 font-bold text-[18px] py-[10px]">
+                    Annual Subscription
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="">
+                  <td className="text-left text-gray-600 font-medium text-[18px] py-[10px]">
+                    Above N10billion in annual Turnover
+                  </td>
+                  <td className="text-left text-gray-600 font-medium text-[18px] py-[10px]">
+                    N500,000
+                  </td>
+                </tr>
+                <tr>
+                  <td className="text-left text-gray-600 font-medium text-[18px] py-[10px]">
+                    N10billion and Below in Annual Turnover
+                  </td>
+                  <td className="text-left text-gray-600 font-medium text-[18px] py-[10px]">
+                    N200,000
+                  </td>
+                </tr>
+                <tr></tr>
+              </tbody>
+            </table>
+          </div>
+          <button
+            onClick={() => setPaymentModalOpen(true)}
+            className="bg-pri_var_2 text-white font-bold py-2 px-4 rounded hover:bg-pri_var_1 w-[60%]"
+          >
             Become a member
           </button>
-        </a>
-      </div>
-    </TemplateContainer>
+        </div>
+      </TemplateContainer>
+    </>
   );
 };
 
