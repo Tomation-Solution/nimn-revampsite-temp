@@ -7,33 +7,6 @@ import { news_data } from "@/assets/data";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-const data = [
-  {
-    title: "NIMN 2021 Annual Conference",
-    description:
-      "The 2021 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
-    date: "26th to 28th October, 2021",
-    type: "Virtual Conference",
-    img: "classes.profilesectrion",
-  },
-  {
-    title: "NIMN 2022 Annual Conference",
-    description:
-      "The 2022 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
-    date: "26th to 28th October, 2022",
-    type: "Virtual Conference",
-    img: "classes.showcase",
-  },
-  {
-    title: "NIMN 2023 Annual Conference",
-    description:
-      "The 2023 Annual Conference of the National Institute of Marketing of Nigeria (NIMN) will hold from 26th to 28th October, 2021 at the International Conference Centre, Abuja.",
-    date: "26th to 28th October, 2023",
-    type: "Virtual Conference",
-    img: "classes.about",
-  },
-];
-
 const InsightCard = ({
   title,
   image,
@@ -66,20 +39,19 @@ const InsightCard = ({
         <p className="font-[700] text-[20px] text-black ">{title}</p>
       </div>
 
-      <div className="border-p_gray  flex items-center gap-4 justify-between">
-        <div className="border-p_gray  flex items-center gap-4">
-          <p className="text-white text-[14px] ">{author}</p>
-          <p className="text-white font-bold text-[14px]text-white ">{date}</p>
-        </div>
-        <Link href={{ pathname: "/news_insights", query: { index } }}>
-          <button className="bg-pri_var_1 px-[2.5em] py-[1em] rounded-md hover:bg-pri font-bold text-white  ">
-            Read More
-          </button>
-        </Link>
+      <div className="border-p_gray  flex items-center gap-4">
+        <p className="text-white text-[14px] ">{author}</p>
+        <p className="text-white font-bold text-[14px]text-white ">{date}</p>
       </div>
 
+      <Link href={{ pathname: "/news_insights", query: { index } }}>
+        <button className="bg-pri_var_1 px-[2.5em] w-full  py-[1em] rounded-md hover:bg-pri font-bold text-white  ">
+          Read More
+        </button>
+      </Link>
+
       <div className="text-white mt-[1em] font-semi-bold text-justify">
-        <p>{paragraphs[0]}</p>
+        <p>{paragraphs[0].slice(0, 120)}</p>
       </div>
     </div>
   );
