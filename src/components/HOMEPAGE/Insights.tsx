@@ -3,6 +3,9 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import classes from "../styles/comp_bg.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { news_data } from "@/assets/data";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 const data = [
   {
@@ -33,16 +36,18 @@ const data = [
 
 const InsightCard = ({
   title,
-  description,
+  image,
+  author,
   date,
-  type,
   index,
+  paragraphs,
 }: {
   title: string;
-  description: string;
+  image: StaticImageData;
+  author: string;
   date: string;
-  type: string;
   index: number;
+  paragraphs: any;
 }) => {
   useEffect(() => {
     AOS.init();
@@ -53,20 +58,28 @@ const InsightCard = ({
       data-aos-easing="ease-in-out"
       data-aos-delay={index * 400}
     >
-      <div className={`bg-white ${classes.about} h-[15em] `}></div>
-      <div className="p-3 mb-[1em] bg-white">
-        <p className="font-[700] text-[25px] text-black ">{title}</p>
+      {/* <div className={`bg-white ${classes.about} h-[15em] `}></div> */}
+      <div className="pb-[.5em]">
+        <Image src={image} alt="news image" width={700} height={400} />
       </div>
-      <div className="border-p_gray  ">
-        <div className="flex items-center gap-x-2">
-          <p>
-            <AiOutlineCalendar color={"#fff"} />
-          </p>
-          <p className="text-p_gray text-[12px] ">EVENT</p>
+      <div className="p-3 mb-[1em] bg-white">
+        <p className="font-[700] text-[20px] text-black ">{title}</p>
+      </div>
+
+      <div className="border-p_gray  flex items-center gap-4 justify-between">
+        <div className="border-p_gray  flex items-center gap-4">
+          <p className="text-white text-[14px] ">{author}</p>
+          <p className="text-white font-bold text-[14px]text-white ">{date}</p>
         </div>
-        <p className="text-[20px] font-[600] text-white ">{description}</p>
-        <p className="text-white font-bold text-[14px]text-white ">{date}</p>
-        <p className="text-white font-bold text-[14px] ">{type}</p>
+        <Link href={{ pathname: "/news_insights", query: { index } }}>
+          <button className="bg-pri_var_1 px-[2.5em] py-[1em] rounded-md hover:bg-pri font-bold text-white  ">
+            Read More
+          </button>
+        </Link>
+      </div>
+
+      <div className="text-white mt-[1em] font-semi-bold text-justify">
+        <p>{paragraphs[0]}</p>
       </div>
     </div>
   );
@@ -85,14 +98,15 @@ const Insights = () => {
         </button>
       </div>
       <div className="grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 ">
-        {data.map((event, index) => (
+        {news_data.map((event, index) => (
           <InsightCard
             key={index}
-            title={event.title}
-            description={event.description}
-            date={event.date}
-            type={event.type}
+            image={event?.image}
+            title={event?.title}
+            author={event?.author}
+            date={event?.date}
             index={index}
+            paragraphs={event?.paragraphs}
           />
         ))}
       </div>
