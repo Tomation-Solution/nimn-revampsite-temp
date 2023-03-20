@@ -3,50 +3,45 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import pic_1 from "../../../public/images/member.jpeg";
-import pic_2 from "../../../public/images/member_3.jpg";
-import pic_3 from "../../../public/images/member_5.jpg";
-import pic_4 from "../../../public/images/member_4.jpg";
+import pic_5 from "../../../public/images/member_4.jpg";
+import pic_6 from "../../../public/images/member_5.jpg";
+import pic_7 from "../../../public/images/member_6.jpg";
+import pic_8 from "../../../public/images/member_7.jpg";
 
 const data = [
   {
-    img: pic_1,
-    title: "Mrs. Ebisan Onyema",
-    body: "The professional qualifications in marketing provide holders with a …",
-    link: "/",
+    img: pic_5,
+    title: "Mr. Walter Okafor",
+    body: "Council Member",
   },
   {
-    img: pic_2,
-    title: "NIMN Examination",
-    body: "The professional examinations are conducted in designated examination …",
-    link: "/",
+    img: pic_6,
+    title: "Mrs. Adenike Olufade",
+    body: "Council Member",
   },
   {
-    img: pic_3,
-    title: "Direct Membership Programme",
-    body: "Membership through Fast Track Executive Membership …",
-    link: "/",
+    img: pic_7,
+    title: "Mrs. Adejoke Ishola",
+    body: "Council Member",
   },
   {
-    img: pic_4,
-    title: "Direct Membership Programme",
-    body: "Membership through Fast Track Executive Membership …",
-    link: "/",
+    img: pic_8,
+    title: "Cheif Hope Gbagi",
+    body: "Council Member",
   },
 ];
-
 const SpotLightCard = ({
   img,
   title,
   body,
   index,
-  link,
-}: {
+}: // link,
+{
   img: any;
   title: string;
   body: string;
   index: number;
-  link: string;
+  // link: string;
 }) => {
   useEffect(() => {
     AOS.init();
@@ -65,9 +60,9 @@ const SpotLightCard = ({
       <div className="flex flex-col gap-y-[1em] text-center absolute -bottom-[10em] bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
         <p className="text-pri_var_2 text-[20px] font-[600]">{title}</p>
         <p className="text-[15px] text-p_gray">{body}</p>
-        <a className="text-pri_var_1 font-[600] text-[16px]" href={link}>
+        {/* <a className="text-pri_var_1 font-[600] text-[16px]" href={link}>
           Read More
-        </a>
+        </a> */}
       </div>
     </div>
   );
@@ -91,7 +86,7 @@ const SpotLight = () => {
             title={item.title}
             body={item.body}
             index={index}
-            link={item.link}
+            // link={item.link}
           />
         ))}
       </div>
