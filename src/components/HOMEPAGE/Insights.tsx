@@ -76,7 +76,7 @@ const Insights = () => {
   return (
     <div className="md:px-[5em] p-[1em] md:my-[8em] bg-pri_var_2">
       <div className="flex justify-between my-[3em]">
-        <p className="text-[42px] font-[700] text-white">Insights</p>
+        <p className="text-[42px] font-[700] text-white">News & Insights</p>
         <button
           className="border-white text-white border-2 md:text-[20px] text-[16px] px-[1em] 
         py-[.5em] hover:bg-pri animate-all duration-300"

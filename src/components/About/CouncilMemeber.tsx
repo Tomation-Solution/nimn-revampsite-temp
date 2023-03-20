@@ -10,12 +10,18 @@ import pic_4 from "../../../public/images/member_3.jpg";
 import pic_5 from "../../../public/images/member_4.jpg";
 import pic_6 from "../../../public/images/member_5.jpg";
 import pic_7 from "../../../public/images/member_6.jpg";
+import pic_8 from "../../../public/images/member_7.jpg";
+import pic_9 from "../../../public/images/member_9.jpg";
+import pic_13 from "../../../public/images/member_8.jpg";
+import pic_10 from "../../../public/images/member_10.jpg";
+import pic_11 from "../../../public/images/member_11.jpg";
+import pic_12 from "../../../public/images/member_12.jpg";
 
 const data = [
   {
-    img: pic_1,
-    title: " Mr. Idorenyen Enang",
-    body: "President and Chairman of Council",
+    img: pic_13,
+    title: "Prof. Ikupolati ",
+    body: "First Vice President",
   },
   {
     img: pic_2,
@@ -47,6 +53,31 @@ const data = [
     title: "Mrs. Adejoke Ishola",
     body: "Council Member",
   },
+  {
+    img: pic_8,
+    title: "Cheif Hope Gbagi",
+    body: "Council Member",
+  },
+  {
+    img: pic_9,
+    title: "Dr. Peter Oriavwote",
+    body: "Council Member",
+  },
+  {
+    img: pic_10,
+    title: "Mr. Shafiu Yauri",
+    body: "Council Member",
+  },
+  {
+    img: pic_11,
+    title: "Mr. Dickson Boniface Usoroh",
+    body: "Council Member",
+  },
+  {
+    img: pic_12,
+    title: "Mr. Babatunde Bewaji",
+    body: "Council Member",
+  },
 ];
 
 const CouncilMemberCard = ({
@@ -58,7 +89,7 @@ const CouncilMemberCard = ({
   img: any;
   title: string;
   body: string;
-  index: number;
+  index?: number;
 }) => {
   useEffect(() => {
     AOS.init();
@@ -67,7 +98,7 @@ const CouncilMemberCard = ({
     <div
       data-aos="fade-up"
       data-aos-easing="ease-in-out"
-      data-aos-delay={index * 400}
+      data-aos-delay={index ? index * 400 : 400}
       className="relative flex flex-col items-center justify-end bg-gray-200 rounded-3xl "
     >
       <div className="rounded-full shadow-lg overflow-hidden">
@@ -76,7 +107,7 @@ const CouncilMemberCard = ({
 
       <div className="flex shadow-xl flex-col gap-y-[1em] text-center absolute -bottom-[10em] bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
         <p className="text-pri_var_2 text-[20px] font-[600]">{title}</p>
-        <p className="text-[15px] text-p_gray">{body}</p>
+        <p className="font-bold text-[18px] text-p_gray">{body}</p>
         {/* <a className="text-pri_var_1 font-[600] text-[16px]" href={link}>
           Read More
         </a> */}
@@ -97,6 +128,13 @@ const CouncilMember = () => {
           Our council members are the best in their fields. They are the best
           professionals in the marketing industry.
         </p>
+      </div>
+      <div className="flex justify-center items-center mb-[18em]">
+        <CouncilMemberCard
+          img={pic_1}
+          title={" Mr. Idorenyen Enang"}
+          body={"President and Chairman of Council"}
+        />
       </div>
       <div className=" grid lg:grid-cols-4 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
         {data.map((item, index) => (
