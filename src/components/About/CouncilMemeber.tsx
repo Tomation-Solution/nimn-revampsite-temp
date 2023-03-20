@@ -4,27 +4,48 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import pic_1 from "../../../public/images/chairman.jpg";
-import pic_2 from "../../../public/images/member_5.jpg";
-import pic_3 from "../../../public/images/member_4.jpg";
+import pic_2 from "../../../public/images/member.jpg";
+import pic_3 from "../../../public/images/member_2.jpg";
+import pic_4 from "../../../public/images/member_3.jpg";
+import pic_5 from "../../../public/images/member_4.jpg";
+import pic_6 from "../../../public/images/member_5.jpg";
+import pic_7 from "../../../public/images/member_6.jpg";
 
 const data = [
   {
     img: pic_1,
-    title: "Dr. Ify Uraih",
-    body: "Chairman",
-    link: "/",
-  },
-  {
-    img: pic_3,
-    title: "Mr Walter Okafor",
-    body: "Council Member",
-    link: "/",
+    title: " Mr. Idorenyen Enang",
+    body: "President and Chairman of Council",
   },
   {
     img: pic_2,
+    title: "Mrs. Ebisan Onyema",
+    body: "Second Vice President",
+  },
+  {
+    img: pic_3,
+    title: "Mr. Anthony Agenmonmen",
+    body: "Immediate Past President",
+  },
+  {
+    img: pic_4,
+    title: "Dr. Chidi Nwankpa",
+    body: "Council Member",
+  },
+  {
+    img: pic_5,
+    title: "Mr. Walter Okafor",
+    body: "Council Member",
+  },
+  {
+    img: pic_6,
     title: "Mrs. Adenike Olufade",
     body: "Council Member",
-    link: "/",
+  },
+  {
+    img: pic_7,
+    title: "Mrs. Adejoke Ishola",
+    body: "Council Member",
   },
 ];
 
@@ -32,13 +53,11 @@ const CouncilMemberCard = ({
   img,
   title,
   body,
-  link,
   index,
 }: {
   img: any;
   title: string;
   body: string;
-  link: string;
   index: number;
 }) => {
   useEffect(() => {
@@ -49,9 +68,11 @@ const CouncilMemberCard = ({
       data-aos="fade-up"
       data-aos-easing="ease-in-out"
       data-aos-delay={index * 400}
-      className="relative flex flex-col items-center justify-end"
+      className="relative flex flex-col items-center justify-end bg-gray-200 rounded-3xl "
     >
-      <Image width={500} height={500} src={img} alt={title} />
+      <div className="rounded-full shadow-lg overflow-hidden">
+        <Image width={500} height={500} src={img} alt={title} />
+      </div>
 
       <div className="flex shadow-xl flex-col gap-y-[1em] text-center absolute -bottom-[10em] bg-white rounded-md px-[1.5em] py-[2em] w-[90%] ">
         <p className="text-pri_var_2 text-[20px] font-[600]">{title}</p>
@@ -77,14 +98,13 @@ const CouncilMember = () => {
           professionals in the marketing industry.
         </p>
       </div>
-      <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
+      <div className=" grid lg:grid-cols-4 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
         {data.map((item, index) => (
           <CouncilMemberCard
             key={index}
             img={item.img}
             title={item.title}
             body={item.body}
-            link={item.link}
             index={index}
           />
         ))}

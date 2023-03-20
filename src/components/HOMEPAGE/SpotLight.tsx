@@ -6,11 +6,12 @@ import "aos/dist/aos.css";
 import pic_1 from "../../../public/images/member.jpeg";
 import pic_2 from "../../../public/images/member_3.jpg";
 import pic_3 from "../../../public/images/member_5.jpg";
+import pic_4 from "../../../public/images/member_4.jpg";
 
 const data = [
   {
     img: pic_1,
-    title: "Professional Qualifications in Marketing",
+    title: "Mrs. Ebisan Onyema",
     body: "The professional qualifications in marketing provide holders with a …",
     link: "/",
   },
@@ -22,6 +23,12 @@ const data = [
   },
   {
     img: pic_3,
+    title: "Direct Membership Programme",
+    body: "Membership through Fast Track Executive Membership …",
+    link: "/",
+  },
+  {
+    img: pic_4,
     title: "Direct Membership Programme",
     body: "Membership through Fast Track Executive Membership …",
     link: "/",
@@ -51,7 +58,7 @@ const SpotLightCard = ({
       data-aos-delay={index * 400}
       className="relative flex flex-col items-center"
     >
-      <div className="w-[20em] h-[20em] overflow-hidden bg-pri">
+      <div className="w-[20em] h-[20em] shadow-md bg-pri rounded-full overflow-hidden">
         <Image width={500} height={500} src={img} alt={title} />
       </div>
 
@@ -76,7 +83,7 @@ const SpotLight = () => {
         </p>
         {/* <p className=" text-center mb-14"> Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p> */}
       </div>
-      <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
+      <div className=" grid lg:grid-cols-4 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
         {data.map((item, index) => (
           <SpotLightCard
             key={index}

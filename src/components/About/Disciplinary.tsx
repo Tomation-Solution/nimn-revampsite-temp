@@ -4,28 +4,30 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import pic_1 from "../../../public/images/chairman.jpg";
-import pic_2 from "../../../public/images/member.jpeg";
-import pic_3 from "../../../public/images/member_6.jpg";
+import pic_1 from "../../../public/images/avatar.jpg";
+import pic_2 from "../../../public/images/avatar.jpg";
+import pic_3 from "../../../public/images/avatar.jpg";
 
 const data = [
   {
     img: pic_1,
-    title: "Dr. Ify Uraih",
-    body: "Chairman",
-    link: "/",
+    title: "Disciplinary member 1",
+    body: "Disciplinary position 1",
   },
   {
     img: pic_3,
-    title: "Mrs. Adejoke Ishola",
-    body: "Council Member",
-    link: "/",
+    title: "Disciplinary member 2",
+    body: "Disciplinary position 2",
   },
   {
     img: pic_2,
-    title: "Mrs. Ebisan Onyenma",
-    body: "Council Member",
-    link: "/",
+    title: "Disciplinary member 3",
+    body: "Disciplinary position 3",
+  },
+  {
+    img: pic_2,
+    title: "Disciplinary member 4",
+    body: "Disciplinary position 4",
   },
 ];
 
@@ -33,13 +35,11 @@ const DisciplinaryCard = ({
   img,
   title,
   body,
-  link,
   index,
 }: {
   img: any;
   title: string;
   body: string;
-  link: string;
   index: number;
 }) => {
   useEffect(() => {
@@ -78,14 +78,13 @@ const Disciplinary = () => {
           are experts in their various fields.{" "}
         </p>
       </div>
-      <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
+      <div className=" grid lg:grid-cols-4 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
         {data.map((item, index) => (
           <DisciplinaryCard
             key={index}
             img={item.img}
             title={item.title}
             body={item.body}
-            link={item.link}
             index={index}
           />
         ))}
