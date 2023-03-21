@@ -15,7 +15,7 @@ const EventDetailsCard = ({
   return (
     <div>
       <div className="w-full  bg-slate-600 overflow-hidden flex items-start justify-center">
-        <Image src={image} alt="" />
+        <Image width={400} src={image} alt="" />
       </div>
       <div className=" flex flex-row   ">
         <div className="lg:px-[10em] md:px-[3em] px-[1em]">
