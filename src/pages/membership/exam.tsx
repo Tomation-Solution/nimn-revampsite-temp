@@ -1,10 +1,12 @@
 import Exam from "@/components/Member/Exam";
 import React from "react";
 
-export const exam = () => {
+const exam = () => {
   return (
     <div>
       <Exam />
     </div>
   );
 };
+
+export default exam;
