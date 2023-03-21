@@ -26,11 +26,10 @@ export { default as EventDetailsShowCard } from "./Events/Details/EventDetailsCa
 export { default as EventPricing } from "./Events/Details/EventPricing";
 export { default as InsightShowcase } from "./Insight/Showcase";
 export { default as Insight } from "./Insight/Insights";
-export { default as InsightDetailsShowCard } from "./Insight/component/InsightDetailsShowCard";
+// export { default as InsightDetailsShowCard } from "./Insight/component/InsightDetailsShowCard";
 export { default as InsightDetailsShowCase } from "./Insight/component/InsightDetailsShowCase";
 export { default as CertShowcase } from "./Certification/certShowcase";
 export { default as CertificateBenefit } from "./Certification/CertificationBenefit";
 export { default as CertificateLevel } from "./Certification/certificateLevels";
 export { default as ContactForm } from "./ContactForm/form";
 export { default as ContactShowcase } from "./ContactForm/contactshowcase";
-
