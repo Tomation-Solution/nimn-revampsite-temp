@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import Link from "next/link";
 import { news_data } from "@/assets/data";
-import { InsightCard } from "../HOMEPAGE/Insights";
+import { InsightsCard } from "../HOMEPAGE/Insights";
 
 export const Insightdata = [
   {
@@ -106,31 +106,29 @@ export const Insightdata = [
   },
 ];
 
-//  export const InsightCard = ({
-//     title,
-//     description,
-//     date,
-//     type,
-// }: {
-//     title: string;
-//     description: string;
-//     date: string;
-//     type: string;
-// }) => {
-//     return (
-//         <div>
-//             <div className="border-l-4 px-10 flex flex-row border-pri_var_2 ">
-//                 <div className="flex items-center flex-col gap-10">
-//                     <p className="text-[20px] font-[600] ">{description}</p>
-//                     <p className="text-p_gray text-[14px] ">{date}</p>
-//                     <p className="text-p_gray text-[14px] ">{type}</p>
-//                 </div>
-
-//             </div>
-//         </div>
-
-//     );
-// };
+export const InsightCard = ({
+  title,
+  description,
+  date,
+  type,
+}: {
+  title: string;
+  description: string;
+  date: string;
+  type: string;
+}) => {
+  return (
+    <div>
+      <div className="border-l-4 px-10 flex flex-row border-pri_var_2 ">
+        <div className="flex items-center flex-col gap-10">
+          <p className="text-[20px] font-[600] ">{description}</p>
+          <p className="text-p_gray text-[14px] ">{date}</p>
+          <p className="text-p_gray text-[14px] ">{type}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Insights = () => {
   return (
@@ -145,7 +143,7 @@ const Insights = () => {
 
       <div className="grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 ">
         {news_data?.map((event, index) => (
-          <InsightCard
+          <InsightsCard
             key={index}
             image={event?.image}
             title={event?.title}

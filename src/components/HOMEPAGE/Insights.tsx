@@ -7,7 +7,7 @@ import { news_data } from "@/assets/data";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-export const InsightCard = ({
+export const InsightsCard = ({
   title,
   image,
   author,
@@ -71,7 +71,7 @@ const Insights = () => {
       </div>
       <div className="grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 ">
         {news_data.slice(0, 3).map((event, index) => (
-          <InsightCard
+          <InsightsCard
             key={index}
             image={event?.image}
             title={event?.title}
