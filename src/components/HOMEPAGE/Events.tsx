@@ -1,63 +1,19 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { AiOutlineCalendar } from "react-icons/ai";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import event_1 from "../../../public/images/event_1.jpeg";
-import event_2 from "../../../public/images/event_2.jpeg";
-import nimn from "../../../public/images/news_assets/nimn.jpg";
-import Image from "next/image";
 import EventRegForm from "../Member/component/EventRegForm";
+import { event_data } from "@/assets/data";
+import Link from "next/link";
 
-const data = [
-  {
-    image: event_1,
-    title: "E-Level Integrated Marketing",
-    description:
-      "The 2023 E-Level Integrated Marketing Conference of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
-    date: "12th to 13th April, 2023",
-    type: "L'eola Hotel, 1, Mogambo Close, Maryland Estate, Lagos",
-  },
-  {
-    image: event_2,
-    title: "Joint Training Programme",
-    description:
-      "The 2023 Joint Training Programme of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
-    date: "12th to 13th April, 2023",
-    type: "L'eola Hotel, 1, Mogambo Close, Maryland Estate, Lagos",
-  },
-  {
-    image: nimn,
-    title: "NIMN Annual Marketing Conference 2023 ",
-    description:
-      "The 2023 E-Level Integrated Marketing Conference of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
-    date: "22nd June 2023",
-    type: ".......",
-  },
-  {
-    image: nimn,
-    title: "Fellows Nite ",
-    description:
-      "The 2023 Fellows Nite of the National Institute of Marketing of Nigeria (NIMN).",
-    date: "22nd June 2023",
-    type: ".......",
-  },
-  {
-    image: nimn,
-    title: "NIMN Annual General Meeting 2023 ",
-    description: "The NIMN Annual General Meeting 2023.",
-    date: "23nd June 2023",
-    type: ".......",
-  },
-];
-
-const EventCard = ({
+export const EventCard = ({
   title,
   description,
   date,
   type,
   index,
   image,
-  handlePaymentModal,
 }: {
   title: string;
   description: string;
@@ -65,7 +21,6 @@ const EventCard = ({
   type: string;
   index: number;
   image: any;
-  handlePaymentModal: any;
 }) => {
   useEffect(() => {
     AOS.init();
@@ -77,7 +32,7 @@ const EventCard = ({
       data-aos-delay={index * 400}
       className="relative flex flex-col "
     >
-      <div className="w-full">
+      <div className="w-full h-[38em] overflow-hidden flex justify-center">
         <Image src={image} alt="event" width={600} height={500} />
       </div>
       <div className="bg-pri_var_2 text-white">
@@ -97,48 +52,27 @@ const EventCard = ({
       </div>
 
       <button className="bg-pri_var_2 text-white py-[1em] mt-[2em]">
-        <p
-          onClick={() => handlePaymentModal(title, description)}
-          className="text-center font-[700] text-[18px]"
-        >
-          Register
-        </p>
+        <p className="text-center font-[700] text-[18px]">View More</p>
       </button>
     </div>
   );
 };
 
 const Events = () => {
-  const [isPaymentModalOpen, setPaymentModalOpen] = useState(false);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-
-  const handlePaymentModal = (title: string, description: string) => {
-    setTitle(title);
-    setDescription(description);
-    setPaymentModalOpen(true);
-  };
   return (
-    <>
-      <EventRegForm
-        openNow={isPaymentModalOpen}
-        onClose={() => setPaymentModalOpen(false)}
-        title={title}
-        description={description}
-      />
-
-      <div className="md:px-[5em] p-[1em] md:my-[8em]">
-        <div className="flex justify-between my-[3em]">
-          <p className="text-[42px] font-[700] text-pri">Events</p>
-          <button
-            className="border-pri_var_2 border-2 md:text-[20px] text-[16px] px-[1em] 
+    <div className="md:px-[5em] p-[1em] md:my-[8em]">
+      <div className="flex justify-between my-[3em]">
+        <p className="text-[42px] font-[700] text-pri">Events</p>
+        <button
+          className="border-pri_var_2 border-2 md:text-[20px] text-[16px] px-[1em] 
         py-[.5em] hover:bg-pri animate-all duration-300"
-          >
-            See all events
-          </button>
-        </div>
-        <div className="grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 ">
-          {data.map((event, index) => (
+        >
+          See all events
+        </button>
+      </div>
+      <div className="grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 items ">
+        {event_data.slice(0, 3).map((event, index) => (
+          <Link key={index} href={`/events/${event.id}`}>
             <EventCard
               key={index}
               title={event.title}
@@ -147,12 +81,11 @@ const Events = () => {
               type={event.type}
               image={event.image}
               index={index}
-              handlePaymentModal={handlePaymentModal}
             />
-          ))}
-        </div>
+          </Link>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

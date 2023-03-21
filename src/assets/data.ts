@@ -1,6 +1,8 @@
 import news_1 from "../../public/images/news_assets/news_1.png";
 import news_2 from "../../public/images/news_assets/news_2.jpeg";
 import nimn from "../../public/images/news_assets/nimn.jpg";
+import event_1 from "../../public/images/event_1.jpeg";
+import event_2 from "../../public/images/event_2.jpeg";
 
 export const news_data = [
   {
@@ -104,5 +106,52 @@ export const news_data = [
 
       "In her submission, the founder and Chief Responsibility Officer of Ruff ‘N’ Tumble, Mrs. Adenike Ogunlesi, stressed the need for business owners to be attuned to the essence of marketing to enable them leverage it for their businesses’ growth, She also believed every business owner must understand the shift in the modern-day consumer’ behaviour, and must therefore design their products with such shifts in mind.",
     ],
+  },
+];
+
+export const event_data = [
+  {
+    id: 1,
+    image: event_1,
+    title: "E-Level Integrated Marketing",
+    description:
+      "The 2023 E-Level Integrated Marketing Conference of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
+    date: "12th to 13th April, 2023",
+    type: "L'eola Hotel, 1, Mogambo Close, Maryland Estate, Lagos",
+  },
+  {
+    id: 2,
+    image: event_2,
+    title: "Joint Training Programme",
+    description:
+      "The 2023 Joint Training Programme of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
+    date: "12th to 13th April, 2023",
+    type: "L'eola Hotel, 1, Mogambo Close, Maryland Estate, Lagos",
+  },
+  {
+    id: 3,
+    image: nimn,
+    title: "NIMN Annual Marketing Conference 2023 ",
+    description:
+      "The 2023 E-Level Integrated Marketing Conference of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
+    date: "22nd June 2023",
+    type: ".......",
+  },
+  {
+    id: 4,
+    image: nimn,
+    title: "Fellows Nite ",
+    description:
+      "The 2023 Fellows Nite of the National Institute of Marketing of Nigeria (NIMN).",
+    date: "22nd June 2023",
+    type: ".......",
+  },
+  {
+    id: 5,
+    image: nimn,
+    title: "NIMN Annual General Meeting 2023 ",
+    description: "The NIMN Annual General Meeting 2023.",
+    date: "23nd June 2023",
+    type: ".......",
   },
 ];

@@ -274,7 +274,7 @@ const EventRegForm: React.FC<PaymentFormModalProps> = ({
                       className="block lg:w-96 w-full rounded-lg bg-pri_var_2 px-5 py-3 text-base font-medium text-white"
                     >
                       {" "}
-                      Join Now{" "}
+                      Proced to pay{" "}
                     </button>
                   </div>
                 </Form>
