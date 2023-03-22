@@ -13,10 +13,7 @@ const ECP = () => {
             <strong>First Vice President</strong>
           </p>
           <p>
-            Prof. Prince Mike Ikupolati{" "}
-            <a href="/">
-              <strong>(View Profile)</strong>
-            </a>
+            Prof. Prince Mike Ikupolati <strong>(View Profile)</strong>
           </p>
         </div>{" "}
         <div className="text-[18px] text-gray-600 my-[2em] leading-9">
@@ -24,16 +21,10 @@ const ECP = () => {
             <strong>Second Vice President</strong>
           </p>
           <p>
-            Mrs. Ebisan Onyema{" "}
-            <a href="/">
-              <strong>(View Profile)</strong>
-            </a>
+            Mrs. Ebisan Onyema <strong>(View Profile)</strong>
           </p>{" "}
           <p>
-            Mrs. Ebisan Onyema{" "}
-            <a href="/">
-              <strong>(View Profile)</strong>
-            </a>
+            Mrs. Ebisan Onyema <strong>(View Profile)</strong>
           </p>
         </div>
       </div>

@@ -205,7 +205,7 @@ const Gallery = () => {
       <div className="flex justify-center p-[1em] mt-[1em] ">
         <div className="flex flex-col items-center">
           <p className="text-pri md:text-[2.5em] text-[1.2em] text-center font-bold mb-[1em] ">
-            2019 Fellows' Dinner & Awards Night
+            2019 Fellows Dinner & Awards Night
           </p>
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 ">
             {data.map((item) => (

@@ -104,8 +104,8 @@ const CheckInput = ({ title, checks }: any) => {
     <div className="leading-7 mt-8">
       <p className="font-bold text-pri mb-2">{title}</p>
       <div>
-        {checks.map((check: any) => (
-          <div>
+        {checks.map((check: any, index: number) => (
+          <div key={index}>
             <input
               type="checkbox"
               className="w-[1em] h-[1em]"
@@ -217,8 +217,8 @@ const LearningDev = () => {
               Awarded )
             </p>
 
-            {data.map((item: any) => (
-              <CheckInput title={item.title} checks={item.checks} />
+            {data.map((item: any, index: number) => (
+              <CheckInput key={index} title={item.title} checks={item.checks} />
             ))}
 
             <button className="bg-gray-300 px-10 p-2 mt-[1em] rounded-md hover:bg-gray-500 animate-all duration-300">
