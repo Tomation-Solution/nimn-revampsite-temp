@@ -10,6 +10,14 @@ import PaymentFormModal from "./Member/component/PaymentForm";
 
 const navData = [
   {
+    url: "/election",
+    name: "2023 Election",
+  },
+  {
+    url: "/amc",
+    name: "2023 AMC",
+  },
+  {
     url: "/",
     name: "Home",
   },
@@ -30,8 +38,8 @@ const navData = [
     name: "Events",
   },
   {
-    url: "/photos",
-    name: "Photos",
+    url: "/gallery",
+    name: "Gallery",
   },
   {
     url: "/Insight",
@@ -56,7 +64,7 @@ const NavButton = ({
 }) => {
   return (
     <Link onClick={() => setShowMenu(!showMenu)} href={url}>
-      <p className=" text-pri font-bold hover:text-pri">{name.toUpperCase()}</p>
+      <p className=" text-pri font-bold hover:text-pri">{name}</p>
     </Link>
   );
 };
@@ -93,14 +101,14 @@ const Header = () => {
           </a>
           <button
             onClick={() => setShowMenu(!showMenu)}
-            className="md:hidden inline text-[34px] "
+            className="lg:hidden inline text-[34px] "
           >
             <FiMenu />
           </button>
         </div>
       </div>
       <div
-        className={`md:flex  md:flex-row md:justify-end lg:px-[10em] md:px-[5em] flex-col md:gap-x-[1.2em]  gap-y-[1rem]  py-[1em]  ${
+        className={`lg:flex  lg:flex-row lg:justify-end lg:px-[10em] md:px-[5em] flex-col lg:gap-x-[1.2em]  gap-y-[1rem]  py-[1em] text-center  ${
           showMenu ? "flex " : "hidden"
         }`}
       >

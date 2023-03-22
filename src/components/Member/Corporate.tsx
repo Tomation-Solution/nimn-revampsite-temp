@@ -41,7 +41,7 @@ const Paragraph = ({ item }: { item: any }) => {
           return (
             <div key={index}>
               <p className="py-[.6em]">
-                <span className="font-bold">{point.title} - </span>
+                <span className="font-bold text-justify">{point.title} - </span>
                 {point.description}
               </p>
             </div>
