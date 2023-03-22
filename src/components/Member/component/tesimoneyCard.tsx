@@ -9,7 +9,7 @@ const EmblaCarousel = (props: any) => {
 
   return (
     <div
-      className={`${classes.embla} bg-pri lg:ml-60 ml-0 rounded-lg  mt-22 lg:w-4/5 flex items-center justify-center`}
+      className={`${classes.embla} lg:ml-60 ml-0 rounded-lg  mt-22 w-4/5 flex items-center justify-center`}
     >
       <div className={`${classes.embla__viewport} `} ref={emblaRef}>
         <div className={`${classes.embla__container} `}>
@@ -23,7 +23,7 @@ const EmblaCarousel = (props: any) => {
               </div>
 
               <p
-                className={`${classes.embla__slide__content} text-center text-white font-bold lg:px-40 px-0  lg:mt-20 mt-0`}
+                className={`${classes.embla__slide__content} text-center text-pri font-bold lg:px-40 px-0  lg:mt-20 mt-0`}
               >
                 <span className=" lg:text-2xl text-center text-sm">
                   {description.description}

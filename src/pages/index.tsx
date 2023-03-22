@@ -12,6 +12,7 @@ import {
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Corousel from "@/components/Corousel";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <HeadComponent pageName="HOME" />
       <main>
         <Showcase />
+        <Corousel />
         {/* <div data-aos="fade-up">
           <Profile />
         </div> */}
