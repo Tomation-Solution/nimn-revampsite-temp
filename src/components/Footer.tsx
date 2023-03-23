@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import mapboxgl from "mapbox-gl";
+import classes from "./styles/comp_bg.module.css";
 
 const data = [
   {
@@ -25,8 +27,46 @@ const RecentPostCard = ({ title, date }: { title: string; date: string }) => {
 };
 
 const Footer = () => {
+  mapboxgl.accessToken =
+    "pk.eyJ1Ijoid2VldmlsMSIsImEiOiJja3ZheTQxazI0NWJnMm5xd2VmMzZ3bGM0In0.3N9LGpqkIDOysDYELv-aTg";
+
+  const mapContainer = useRef<any>(null);
+  const map = useRef<any>();
+  const [lng, setLng] = useState(3.35454);
+  const [lat, setLat] = useState(6.57092);
+  const [zoom, setZoom] = useState(9);
+
+  useEffect(() => {
+    if (!map.current) return; // wait for map to initialize
+    map.current.on("move", () => {
+      setLng(map.current.getCenter().lng.toFixed(4));
+      setLat(map.current.getCenter().lat.toFixed(4));
+      setZoom(map.current.getZoom().toFixed(2));
+    });
+  });
+
+  useEffect(() => {
+    if (map.current) return; // initialize map only once
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: "mapbox://styles/mapbox/streets-v12",
+      center: [lng, lat],
+      zoom: zoom,
+    });
+  });
   return (
     <div className="mt-[5em]">
+      <div className="relative">
+        <div className={classes.sidebar}>
+          Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+          <p>
+            National Institute of Marketing of Nigeria Marketing House 48B,
+            Adekunle Fajuyi Way, GRA Ikeja, Lagos Nigeria.
+          </p>
+        </div>
+
+        <div ref={mapContainer} className="h-[50em]" />
+      </div>
       <div className="bg-pri_var_2 lg:p-[4em] md:p-[3em] p-[1em] text-white mt-[2em]">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[2em]">
           <div>

@@ -34,9 +34,15 @@ const items = [
           <p className=" text-pri mb-[10px] md:text-[65px] text-[35px] font-extrabold">
             NIMN Code of Professional Practice
           </p>
-          <button className="bg-pri_var_1 md:p-4 p-2 text-white mt-3 md:text-[18px] text-[15px]">
-            Download Here
-          </button>
+          <Link
+            href={
+              "https://drive.google.com/file/d/1t4y4WxqdMtawi4HcGil2Lp6MskM_85uA/view?usp=sharing"
+            }
+          >
+            <button className="bg-pri_var_1 md:p-4 p-2 text-white mt-3 md:text-[18px] text-[15px]">
+              Download Here
+            </button>
+          </Link>
         </div>
       </div>
     ),

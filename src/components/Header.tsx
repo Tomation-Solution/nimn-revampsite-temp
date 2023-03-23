@@ -46,6 +46,10 @@ const navData = [
     name: "Insight",
   },
   {
+    url: "/marketplace",
+    name: "Marketplace",
+  },
+  {
     url: "/contact",
     name: "Contact",
   },
