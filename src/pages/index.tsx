@@ -22,8 +22,8 @@ export default function Home() {
   return (
     <>
       <HeadComponent pageName="HOME" />
-      <main>
-        <Showcase />
+      <main className="overflow-hidden w-full relative">
+        {/* <Showcase /> */}
         <Corousel />
         {/* <div data-aos="fade-up">
           <Profile />

@@ -1,12 +1,9 @@
-import ElectionNavigation from "@/components/Election/ElectionNavigation";
 import TemplateContainer from "@/components/TemplateContainer";
 import React from "react";
 
 const lev = () => {
   return (
     <>
-      <ElectionNavigation />
-
       <TemplateContainer>
         <div>
           <p className="md:text-[32px] text-[24px]  lg:text-[40px]  font-[700] w-full md:text-pri text-white  md:p-0  p-[.8em] md:bg-transparent  bg-pri">

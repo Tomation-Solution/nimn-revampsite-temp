@@ -7,11 +7,34 @@ import login from "../../public/svgs/login.svg";
 import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
 import PaymentFormModal from "./Member/component/PaymentForm";
+import { BsChevronDown } from "react-icons/bs";
 
 const navData = [
   {
     url: "/election",
     name: "2023 Election",
+    subMenu: [
+      {
+        url: "/election",
+        name: "2023 Election Contestants Profile",
+      },
+      {
+        url: "/election/lev",
+        name: "List of Eligible Voters",
+      },
+      {
+        url: "https://drive.google.com/file/d/1JUb7_Yjdl4UPbFhvHQi7w7Kdp0lBY30S/view",
+        name: "Election Nomination Form",
+      },
+      {
+        url: "https://drive.google.com/file/d/1sJw2T3hHYtXbeB3oKh5L_Pa3XIGKR1I4/view",
+        name: "Election Guidelines",
+      },
+      {
+        url: "https://drive.google.com/file/d/124seHWUp3AKU1hV0E8PClAuWOABazl3V/view",
+        name: "2022 Annual Report and Accounts",
+      },
+    ],
   },
   {
     url: "/amc",
@@ -32,6 +55,28 @@ const navData = [
   {
     url: "/certification",
     name: "Certification",
+    subMenu: [
+      {
+        url: "/certification/learningDev",
+        name: "Attend a Training",
+      },
+      {
+        url: "/certification/benefit",
+        name: "Benefits of Having NIMN Professional Qualification In Marketing",
+      },
+      {
+        url: "https://drive.google.com/file/d/1-3WhKIskcImmhCDZadn5Cewz-UEralWJ/view?usp=sharing",
+        name: "Prospectus and Syllabus For Professional Examination",
+      },
+      {
+        url: "/certification/qualifications",
+        name: "Professional Qualifications In Marketing",
+      },
+      {
+        url: "/certification/about",
+        name: "About the Examination",
+      },
+    ],
   },
   {
     url: "/events",
@@ -58,23 +103,51 @@ const navData = [
 const NavButton = ({
   name,
   url,
-  setShowMenu,
-  showMenu,
+
+  subMenu,
 }: {
   name: string;
   url: string;
-  setShowMenu: any;
-  showMenu: any;
+
+  subMenu?: any;
 }) => {
+  const [showSubMenu, setShowSubMenu] = useState(false);
   return (
-    <Link onClick={() => setShowMenu(!showMenu)} href={url}>
-      <p className=" text-pri font-bold hover:text-pri">{name}</p>
-    </Link>
+    <>
+      {subMenu ? (
+        <div
+          className="cursor-pointer relative flex flex-col items-center "
+          onClick={() => setShowSubMenu(!showSubMenu)}
+        >
+          <div className="flex items-center gap-x-3">
+            <p className=" text-pri font-bold hover:text-pri">{name}</p>
+            <BsChevronDown className="text-pri font-bold" />
+          </div>
+
+          {showSubMenu && (
+            <div className="flex flex-col gap-y-[.5em] z-30 absolute bg-pri  w-[20em] mt-8">
+              {subMenu.map((item: any, index: number) => (
+                <Link href={item.url} key={index}>
+                  <p className=" text-white font-bold hover:text-pri hover:bg-white">
+                    {item.name}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ) : (
+        <Link href={url}>
+          <p className=" text-pri font-bold hover:text-pri">{name}</p>
+        </Link>
+      )}
+    </>
   );
 };
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+
   const [isPaymentModalOpen, setPaymentModalOpen] = useState(false);
   return (
     <>
@@ -112,7 +185,7 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`lg:flex  lg:flex-row lg:justify-end lg:px-[10em] md:px-[5em] flex-col lg:gap-x-[1.2em]  gap-y-[1rem]  py-[1em] text-center  ${
+        className={`lg:flex  lg:flex-row lg:justify-end lg:px-[10em] md:px-[5em] flex-col lg:gap-x-[1.2em]  gap-y-[1rem]  py-[1em] text-center items-center  ${
           showMenu ? "flex " : "hidden"
         }`}
       >
@@ -121,8 +194,7 @@ const Header = () => {
             key={index}
             name={item.name}
             url={item.url}
-            setShowMenu={setShowMenu}
-            showMenu={showMenu}
+            subMenu={item.subMenu}
           />
         ))}
       </div>

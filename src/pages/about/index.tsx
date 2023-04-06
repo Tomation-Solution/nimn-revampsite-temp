@@ -11,7 +11,7 @@ import {
 function about() {
   return (
     <>
-      {/* <AboutShowCase/> */}
+      <AboutShowCase />
       <ProfileSection />
       <MissionSection />
       <NIMNAct />

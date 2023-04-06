@@ -6,6 +6,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.showcase2 {
+  background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
+    url("../../../public/images/news_assets/news_1.png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .sidebar {
   background-color: rgba(35, 55, 75, 0.9);
@@ -56,6 +64,14 @@
 .about {
   background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
     url("../../../public/images/conf.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.marketplace {
+  background: linear-gradient(rgba(1, 170, 255, 0.2), rgba(1, 170, 255, 0.2)),
+    url("../../../public/images/marketplace_bg.jpg");
 
   background-position: center;
   background-repeat: no-repeat;

@@ -99,6 +99,7 @@ const Marketplace = () => {
         modalDescription={modalDescription}
         handlePrevClick={handlePrevClick}
         handleNextClick={handleNextClick}
+        header="Marketplace"
       />
       <div className="flex justify-center p-[1em] mt-[2em] ">
         <div className="flex flex-col items-center">

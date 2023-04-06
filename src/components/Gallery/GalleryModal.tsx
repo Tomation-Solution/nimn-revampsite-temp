@@ -11,6 +11,7 @@ type ModalProps = {
   modalDescription: string;
   handlePrevClick: () => void;
   handleNextClick: () => void;
+  header?: string;
 };
 type ModalOpenerProps = {
   openNow: boolean;
@@ -23,6 +24,7 @@ const GalleryModal: React.FC<ModalProps> = ({
   modalDescription,
   handlePrevClick,
   handleNextClick,
+  header,
 }) => {
   // const handleSubmit = async (values,{setSubmitting,resetForm})=>(
   //       consol.log(values)
@@ -35,7 +37,7 @@ const GalleryModal: React.FC<ModalProps> = ({
           as="h3"
           className=" text-3xl text-center font-bold leading-6  "
         >
-          Gallery
+          {header || "Gallery"}
         </Dialog.Title>
 
         <div className="flex items-center relative">

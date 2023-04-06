@@ -1,6 +1,10 @@
 import React from "react";
 import HeadComponent from "@/components/head";
-import { CertificateBenefit, CertificateLevel } from "@/components";
+import {
+  CertShowcase,
+  CertificateBenefit,
+  CertificateLevel,
+} from "@/components";
 import LearningDev from "@/components/Certification/LearningDev";
 import Link from "next/link";
 
@@ -63,6 +67,7 @@ function membership() {
     <>
       <HeadComponent pageName="Certificate" />
       <main>
+        <CertShowcase />
         <div className="flex items-center justify-center m-[2em]">
           <div className="lg:w-[60%] md:w-[75%] w-[90%]">
             {/* <h2 className=" font-bold mt-10  lg:text-[46px] md:text-[30px] text-[20px] text-3xl text-justify mb-5 text-pri">

@@ -3,88 +3,92 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Link from "next/link";
+import Showcase from "./HOMEPAGE/Showcase";
 import Image from "next/image";
 import bg_1 from "../../public/images/bg_1.jpg";
-import Link from "next/link";
+import { GoLocation } from "react-icons/go";
+import { GrMail } from "react-icons/gr";
+import { FaPhoneAlt } from "react-icons/fa";
+import Showcase2 from "./HOMEPAGE/Showcase2";
+
+const InfoCard = ({
+  icon,
+  headline,
+  detail,
+}: {
+  icon: any;
+  headline: string;
+  detail: string;
+}) => {
+  return (
+    <div className="flex items-center justify-center gap-x-[10px]">
+      <div className="border-2 border-pri_var_1 border-dotted   p-[10px] rounded-[5px]">
+        <p className="text-pri_var_1 text-[24px] ">{icon}</p>
+      </div>
+      <div>
+        <p className="font-[800] md:text-[16px] text-[14px]">{headline}</p>
+        <p className="text-[10px] ">{detail}</p>
+      </div>
+    </div>
+  );
+};
 
 const items = [
   {
-    id: 1,
-    content: (
-      <div
-        className="bg-gray-100 shadow-2xl h-full flex items-center justify-center
-  "
-      >
-        <div className="font-extrabold text-start  md:text-[65px] text-[35px]">
-          <p className=" text-white bg-pri mb-[10px] ">June 2023 Exam</p>
-          <p className=" text-white bg-pri ]">Time-Table Is Out</p>
-
-          <button className="bg-pri_var_1 md:p-4 p-2 text-white mt-3 md:text-[18px] text-[15px]">
-            Register Now
-          </button>
-        </div>
-      </div>
-    ),
-  },
-  {
     id: 2,
-    content: (
-      <div className="bg-gray-100 shadow-2xl h-full flex items-center justify-center">
-        <div>
-          <p className=" text-pri mb-[10px] md:text-[65px] text-[35px] font-extrabold">
-            NIMN Code of Professional Practice
-          </p>
-          <Link
-            href={
-              "https://drive.google.com/file/d/1t4y4WxqdMtawi4HcGil2Lp6MskM_85uA/view?usp=sharing"
-            }
-          >
-            <button className="bg-pri_var_1 md:p-4 p-2 text-white mt-3 md:text-[18px] text-[15px]">
-              Download Here
-            </button>
-          </Link>
-        </div>
-      </div>
-    ),
+    content: <Showcase />,
   },
   {
     id: 3,
-    content: (
-      <div className="bg-gray-100 shadow-2xl h-full text-left flex items-center justify-center">
-        <div>
-          <div className="font-bold md:text-[45px] text-[25px]">
-            ARCON, NIMN MOU takes off with joint training program
-          </div>
-          <p>
-            In line with efforts to reposition the Integrated Marketing
-            Communication, IMC Industry, the Memorandum of Understanding, MOU,
-            signed by. . .
-          </p>
-          <Link href={{ pathname: "/news_insights", query: "0" }}>
-            <button className="bg-pri_var_1 md:p-4 p-2 text-white mt-3 md:text-[18px] text-[15px]">
-              Read more
-            </button>
-          </Link>
-        </div>
-      </div>
-    ),
+    content: <Showcase2 />,
   },
 ];
 
 export default function Corousel() {
   const renderItem = (item: any) => {
     return (
-      <div className="h-[20em] bg-pri_var_1" key={item.id}>
+      <div className=" " key={item.id}>
         {item.content}
       </div>
     );
   };
 
   return (
-    <div className=" flex items-center justify-center mt-[8em]">
+    <div className=" flex items-center justify-center relative">
       {" "}
-      <div className="lg:w-3/5 md:w-4/5 w- ">
-        <Carousel>{items.map((item) => renderItem(item))}</Carousel>
+      <div className="w-full    ">
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          showThumbs={false}
+          showStatus={false}
+          showIndicators={false}
+          interval={5000}
+          transitionTime={1000}
+        >
+          {items.map((item) => renderItem(item))}
+        </Carousel>
+      </div>
+      <div
+        className="absolute  md:p-[3em] p-[2em] rounded-md shadow-lg bg-white -bottom-[5em]
+       flex md:flex-row flex-col md:gap-x-[4em] gap-y-[2em] items-center "
+      >
+        <InfoCard
+          icon={<GoLocation />}
+          headline="48B, Adekunle Fajuyi Way,"
+          detail="Ikeja GRA, Lagos, Nigeria."
+        />
+        <InfoCard
+          icon={<GrMail />}
+          headline="info@nimn.com.ng"
+          detail="support 24/7"
+        />
+        <InfoCard
+          icon={<FaPhoneAlt />}
+          headline=" (+234)8160321503"
+          detail=""
+        />
       </div>
     </div>
   );
