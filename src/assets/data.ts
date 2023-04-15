@@ -76,7 +76,7 @@ export const news_data = [
   {
     id: 3,
     title:
-      "Enang Emerges NINM President, Seeks More Roles for Marketing Professionals",
+      "Enang Emerges NIMN President, Seeks More Roles for Marketing Professionals",
     image: nimn,
     date: "2years ago",
     platform: "TRIBUNE",

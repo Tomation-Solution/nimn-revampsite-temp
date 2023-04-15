@@ -10,32 +10,32 @@ import PaymentFormModal from "./Member/component/PaymentForm";
 import { BsChevronDown } from "react-icons/bs";
 
 const navData = [
-  {
-    url: "/election",
-    name: "2023 Election",
-    subMenu: [
-      {
-        url: "/election",
-        name: "2023 Election Contestants Profile",
-      },
-      {
-        url: "/election/lev",
-        name: "List of Eligible Voters",
-      },
-      {
-        url: "https://drive.google.com/file/d/1JUb7_Yjdl4UPbFhvHQi7w7Kdp0lBY30S/view",
-        name: "Election Nomination Form",
-      },
-      {
-        url: "https://drive.google.com/file/d/1sJw2T3hHYtXbeB3oKh5L_Pa3XIGKR1I4/view",
-        name: "Election Guidelines",
-      },
-      {
-        url: "https://drive.google.com/file/d/124seHWUp3AKU1hV0E8PClAuWOABazl3V/view",
-        name: "2022 Annual Report and Accounts",
-      },
-    ],
-  },
+  // {
+  //   url: "/election",
+  //   name: "2023 Election",
+  //   subMenu: [
+  //     {
+  //       url: "/election",
+  //       name: "2023 Election Contestants Profile",
+  //     },
+  //     {
+  //       url: "/election/lev",
+  //       name: "List of Eligible Voters",
+  //     },
+  //     {
+  //       url: "https://drive.google.com/file/d/1JUb7_Yjdl4UPbFhvHQi7w7Kdp0lBY30S/view",
+  //       name: "Election Nomination Form",
+  //     },
+  //     {
+  //       url: "https://drive.google.com/file/d/1sJw2T3hHYtXbeB3oKh5L_Pa3XIGKR1I4/view",
+  //       name: "Election Guidelines",
+  //     },
+  //     {
+  //       url: "https://drive.google.com/file/d/124seHWUp3AKU1hV0E8PClAuWOABazl3V/view",
+  //       name: "2022 Annual Report and Accounts",
+  //     },
+  //   ],
+  // },
   {
     url: "/amc",
     name: "2023 AMC",

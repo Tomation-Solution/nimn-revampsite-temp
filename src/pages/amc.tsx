@@ -37,8 +37,8 @@ const amc = () => {
               </strong>
             </p>
             <p>
-              For more clarifications, Kindly reach out to Mr. Adewale on +234
-              803 670 6491
+              For more clarifications, Kindly reach out to Mr. Adewale Adeshina
+              on +234 803 670 6491
             </p>
           </div>
         </div>

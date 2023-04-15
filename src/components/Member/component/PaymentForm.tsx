@@ -37,7 +37,7 @@ const PaymentFormModal: React.FC<PaymentFormModalProps> = ({
           <h1 className="text-center text-2xl font-bold text-[#017d3f] sm:text-3xl"></h1>
 
           <p className="mx-auto text-lg mt-4 max-w-md text-center text-gray-500">
-            become a member and enjoy memberahip benifits
+            become a member and enjoy membership benifits
           </p>
           <Formik
             initialValues={{
