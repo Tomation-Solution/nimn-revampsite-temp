@@ -36,10 +36,10 @@ const navData = [
   //     },
   //   ],
   // },
-  {
-    url: "/amc",
-    name: "2023 AMC",
-  },
+  // {
+  //   url: "/amc",
+  //   name: "2023 AMC",
+  // },
   {
     url: "/",
     name: "Home",

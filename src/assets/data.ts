@@ -100,7 +100,7 @@ export const news_data = [
       "The former president of the marketing institute stated that with the digitization of the Institute’s operations, it was able able to carry out an electronic voting that allowed more members to participate at deciding the choice of the Institute’s leadership, irrespective of their places of residents.",
       "One of the highlights of the two-day event was the conferment of the institute’s Fellowship Awards on 26 members of the institute, and an Honorary Fellowship to the Group Executive, Retail Banking Group, South, First Bank of Nigeria, Mr. Nnaemeka Ejeh.",
 
-      "Earlier, at its Annual Marketing Conference tagged ‘SMEs in Post Covid-19 World’, Agenmonmen had argued that every professional, especially marketers, had a role to play, in the post Covid-19 world, if the nation’s small businesses were to survive. According to him, the decision to have the theme of this year’s marketing conference focus on MSMEs, their roles in an economy, the clear and present danger which the COVID-19 pandemic had constituted to their survival, and what marketing practitioners could do to ensure their survival, was to bring this all-important issue to the front-burner.NIMN has made very conscious efforts to deepen the discussions around some topics that are germane to our growth and development as a nation, he stated. In his keynote address, the Guest Speaker, Mr. Alex Okoh, argued that though MSMEs are critical stimulators of economic growth, due to their potential to create jobs, he was, however, of the strong belief that inadequate access to the market, infrastructure challenges and other extraneous factors had all contributed to slow down their growth, and spike production cost.",
+      "Earlier, at its Annual Marketing Communications tagged ‘SMEs in Post Covid-19 World’, Agenmonmen had argued that every professional, especially marketers, had a role to play, in the post Covid-19 world, if the nation’s small businesses were to survive. According to him, the decision to have the theme of this year’s marketing Communications focus on MSMEs, their roles in an economy, the clear and present danger which the COVID-19 pandemic had constituted to their survival, and what marketing practitioners could do to ensure their survival, was to bring this all-important issue to the front-burner.NIMN has made very conscious efforts to deepen the discussions around some topics that are germane to our growth and development as a nation, he stated. In his keynote address, the Guest Speaker, Mr. Alex Okoh, argued that though MSMEs are critical stimulators of economic growth, due to their potential to create jobs, he was, however, of the strong belief that inadequate access to the market, infrastructure challenges and other extraneous factors had all contributed to slow down their growth, and spike production cost.",
 
       "While arguing that COVID-19 had affected small businesses and redefined individual and corporate ways of doing things, Okoh, who is also the Director General, Bureau of Public Enterprises (BPE), believed there were huge opportunities for those businesses to turn around their fortunes, especially with the support of marketing practitioners.For instance, he argued, marketing practitioners should be ready to support small businesses in the area of market orientation, which, he noted, is presently low. Every business needs publicity. Marketing allows the business to connect with the consumers. It boosts sales, helps the business to construct constant clientele base. That is why I believe it can play a major role in MSMEs’ survival in the country, he added.",
 
@@ -115,7 +115,7 @@ export const event_data = [
     image: event_1,
     title: "E-Level Integrated Marketing",
     description:
-      "The 2023 E-Level Integrated Marketing Conference of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
+      "The 2023 E-Level Integrated Marketing Communications of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
     date: "12th to 13th April, 2023",
     type: "L'eola Hotel, 1, Mogambo Close, Maryland Estate, Lagos",
   },
@@ -131,9 +131,9 @@ export const event_data = [
   {
     id: 3,
     image: nimn,
-    title: "NIMN Annual Marketing Conference 2023 ",
+    title: "NIMN Annual Marketing Communications 2023 ",
     description:
-      "The 2023 E-Level Integrated Marketing Conference of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
+      "The 2023 E-Level Integrated Marketing Communications of ARCON and the National Institute of Marketing of Nigeria (NIMN).",
     date: "22nd June 2023",
     type: ".......",
   },
