@@ -2,7 +2,7 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
-import bg_1 from "../../public/images/gallery/gal_16.jpg";
+import bg_1 from "../../public/images/gallery/gal_16.png";
 import bg_2 from "../../public/images/gallery/gal_21.jpg";
 import bg_3 from "../../public/images/gallery/gal_20.jpg";
 
@@ -31,9 +31,7 @@ const items = [
 
         "
         >
-          Mr. Obabori Peter Olusola receiving a handshake with the President
-          NIMN Mr Tony Agenmonmen, after the presentation of the fellowship
-          awards
+          Fellows Induction
         </p>
       </div>
     ),
@@ -62,7 +60,7 @@ const items = [
 
         "
         >
-          Chairman NIMN event committee addressing participants
+          Acces bank staffs at the Conference
         </p>
       </div>
     ),
@@ -91,7 +89,7 @@ const items = [
 
         "
         >
-          President NIMN Mr Tony Agenmonmen giving his address at the fellowship
+          President NIMN, Dr. Idorenyen Enang been interviewed at the fellowship
           dinner and award night
         </p>
       </div>

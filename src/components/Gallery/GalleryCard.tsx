@@ -13,9 +13,9 @@ const GalleryCard = ({
   return (
     <div
       onClick={onClick}
-      className="cursor-pointer  w-[20em] shadow-xl my-4 mx-2  overflow-hidden flex flex-col items-center  rounded-2xl group hover:p-[1em]  hover:bg-gray-200 animate-all duration-300 "
+      className="cursor-pointer  w-[20em]  shadow-xl my-4 mx-2  overflow-hidden flex flex-col items-center  rounded-2xl group hover:p-[1em]  hover:bg-gray-200 animate-all duration-300 "
     >
-      <div className="w-[19em] relative">
+      <div className="w-[19em]  h-[13.5em] overflow-hidden  relative">
         <div className="absolute w-full h-full group-hover:backdrop-blur-sm" />
         <Image width={300} height={260} src={image} alt={description} />
       </div>

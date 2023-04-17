@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import GalleryCard from "./GalleryCard";
 import gal_1 from "../../../public/images/gallery/gal_1.jpg";
-import gal_2 from "../../../public/images/gallery/gal_2.jpg";
-import gal_3 from "../../../public/images/gallery/gal_3.jpg";
+import gal_2 from "../../../public/images/gallery/gal_2.png";
+import gal_3 from "../../../public/images/gallery/gal_3.png";
 import gal_4 from "../../../public/images/gallery/gal_4.jpg";
 import gal_5 from "../../../public/images/gallery/gal_5.jpg";
 import gal_6 from "../../../public/images/gallery/gal_6.jpg";
@@ -15,7 +15,7 @@ import gal_12 from "../../../public/images/gallery/gal_12.jpg";
 import gal_13 from "../../../public/images/gallery/gal_13.jpg";
 import gal_14 from "../../../public/images/gallery/gal_14.jpg";
 import gal_15 from "../../../public/images/gallery/gal_15.jpg";
-import gal_16 from "../../../public/images/gallery/gal_16.jpg";
+import gal_16 from "../../../public/images/gallery/gal_16.png";
 import gal_17 from "../../../public/images/gallery/gal_17.jpg";
 import gal_18 from "../../../public/images/gallery/gal_18.jpg";
 import gal_19 from "../../../public/images/gallery/gal_19.jpg";
@@ -28,132 +28,121 @@ const data = [
   {
     id: 1,
     image: gal_1,
-    description:
-      "The Chairman Body of Fellows NIMN, Mr Tunji Oyebanji, President NIMN, Mr Tony Agenmonmen, Keynote Speaker, Prof. Chris Ogbeche",
+    description: "",
   },
   {
     id: 2,
     image: gal_2,
-    description:
-      "President NIMN Mr Tony Agenmonmen, presenting Fellows Award Certificates to Dr. Mobolaji Abdullateef",
+    description: "",
   },
   {
     id: 3,
     image: gal_3,
-    description:
-      "The Chairman Body of Fellows NIMN, Mr Tunji Oyebanji presenting fellowship award certificate to Mr Adedeji Adewolu Olubunmi",
+    description: "",
   },
   {
     id: 4,
     image: gal_4,
-    description:
-      "President NIMN Mr Tony Agenmonmen, presenting Fellows Award Certificates to Dr. Adefulu Adesoga Dada",
+    description: "",
   },
   {
     id: 5,
     image: gal_5,
-    description:
-      "2nd Vice President Prince Femi Oyewole decorating Mr Emmanual Agu with the Institute Fellow Lapep Pin",
+    description: "",
   },
   {
     id: 6,
     image: gal_6,
-    description:
-      "President NIMN Mr Tony Agenmonmen, presenting Fellowship Award Certificates to Mr Akanmu Olu",
+    description: "",
   },
   {
     id: 7,
     image: gal_7,
-    description:
-      "President NIMN Mr Tony Agenmonmen, and Chairman Body of Fellows, taking picture with Prince Olalere Baale after receiving the Institite Fellowship Award",
+    description: "",
   },
   {
     id: 8,
     image: gal_8,
-    description:
-      "Dr. Jide Akeredolu receiving a handshake from NIMN president Mr. Tony Agenmonmen after taking honorary fellowship award of the Institute",
+    description: "",
   },
   {
     id: 9,
     image: gal_9,
-    description:
-      "Mrs Mafe Oluwayemisi receiving a handshake from NIMN President Mr Tony Agenmonmen",
+    description: "",
   },
-  {
-    id: 10,
-    image: gal_10,
-    description: "Group Photograph of awardees",
-  },
-  {
-    id: 11,
-    image: gal_11,
-    description:
-      "President NIMN Mr Tony Agenmonmen presenting Fellowship Award Certificate to Mrs Ibidunni Ituah-Ighodalo",
-  },
-  {
-    id: 12,
-    image: gal_12,
-    description:
-      "Mr Oriakhi Emmanuel responding on behalf of all the fellow awardees",
-  },
-  {
-    id: 13,
-    image: gal_13,
-    description:
-      "Prince Femi Oyewole 2nd Vice President giving the vote of thanks at the event",
-  },
-  {
-    id: 14,
-    image: gal_14,
-    description:
-      "Dr. Kabuoh Margaret Nma, receiving her Fellowship award certificate from Mr Tony Agenmonmen and the Chairman Body of Fellows NIMN, Mr Tunji Oyebanji",
-  },
-  {
-    id: 15,
-    image: gal_15,
-    description:
-      "Mrs Ibiduni Ituah-Ighodalo responding on behalf of the Honorary fellow awardees",
-  },
-  {
-    id: 16,
-    image: gal_16,
-    description:
-      "Mr. Obabori Peter Olusola receiving a handshake with the President NIMN Mr Tony Agenmonmen, after the presentation of the fellowship awards",
-  },
-  {
-    id: 17,
-    image: gal_17,
-    description:
-      "Dr. Issa Abdulraheem with the President NIMN Mr . Tony Agenmonmen, and Chairman Body of Fellows Mr. Tunji Oyebanji",
-  },
-  {
-    id: 18,
-    image: gal_18,
-    description:
-      "Professor Oduyoye Odutola decorated with the NIMN fellow Lapep pin",
-  },
+  // {
+  //   id: 10,
+  //   image: gal_10,
+  //   description: "",
+  // },
+  // {
+  //   id: 11,
+  //   image: gal_11,
+  //   description:
+  //     "President NIMN Mr Tony Agenmonmen presenting Fellowship Award Certificate to Mrs Ibidunni Ituah-Ighodalo",
+  // },
+  // {
+  //   id: 12,
+  //   image: gal_12,
+  //   description:
+  //     "Mr Oriakhi Emmanuel responding on behalf of all the fellow awardees",
+  // },
+  // {
+  //   id: 13,
+  //   image: gal_13,
+  //   description:
+  //     "Prince Femi Oyewole 2nd Vice President giving the vote of thanks at the event",
+  // },
+  // {
+  //   id: 14,
+  //   image: gal_14,
+  //   description:
+  //     "Dr. Kabuoh Margaret Nma, receiving her Fellowship award certificate from Mr Tony Agenmonmen and the Chairman Body of Fellows NIMN, Mr Tunji Oyebanji",
+  // },
+  // {
+  //   id: 15,
+  //   image: gal_15,
+  //   description:
+  //     "Mrs Ibiduni Ituah-Ighodalo responding on behalf of the Honorary fellow awardees",
+  // },
+  // {
+  //   id: 16,
+  //   image: gal_16,
+  //   description:
+  //     "Mr. Obabori Peter Olusola receiving a handshake with the President NIMN Mr Tony Agenmonmen, after the presentation of the fellowship awards",
+  // },
+  // {
+  //   id: 17,
+  //   image: gal_17,
+  //   description:
+  //     "Dr. Issa Abdulraheem with the President NIMN Mr . Tony Agenmonmen, and Chairman Body of Fellows Mr. Tunji Oyebanji",
+  // },
+  // {
+  //   id: 18,
+  //   image: gal_18,
+  //   description:
+  //     "Professor Oduyoye Odutola decorated with the NIMN fellow Lapep pin",
+  // },
+  // {
+  //   id: 19,
+  //   image: gal_19,
+  //   description:
+  //     "Mrs Nkwoji Ngozi receiving her fellowship award certificate from the President NIMN Mr Tony Agenmonmen and Chairman Body of Fellows Mr. Tunji Oyebanji",
+  // },
   {
     id: 19,
     image: gal_19,
-    description:
-      "Mrs Nkwoji Ngozi receiving her fellowship award certificate from the President NIMN Mr Tony Agenmonmen and Chairman Body of Fellows Mr. Tunji Oyebanji",
-  },
-  {
-    id: 19,
-    image: gal_19,
-    description:
-      "Mrs Moore Margaret Nkechi receiving her fellowship award certificate from the President NIMN Mr Tony Agenmonmen",
+    description: "",
   },
   {
     id: 20,
     image: gal_20,
-    description:
-      "President NIMN Mr Tony Agenmonmen giving his address at the fellowship dinner and award night",
+    description: "",
   },
   {
     id: 21,
     image: gal_21,
-    description: "Chairman NIMN event committee addressing participants",
+    description: "",
   },
 ];
 
