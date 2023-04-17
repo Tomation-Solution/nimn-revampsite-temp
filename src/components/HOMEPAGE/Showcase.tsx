@@ -20,12 +20,14 @@ const Showcase = () => {
           <p className="md:text-[48px] text-[34px] text-white font-[800] backdrop-blur">
             NIMN Introduces group life protection insurance <br /> for members
           </p>
-          <button
-            onClick={() => setPaymentModalOpen(true)}
-            className="bg-pri_var_1 rounded-md text-white md:text-[24px] text-[18px] px-[1em] py-[1em] hover:bg-pri animate-all duration-300 font-bold"
+          <a
+            href=" https://www.members.nimn.com.ng/prospective"
+            className="w-full"
           >
-            Become A Member
-          </button>
+            <button className="bg-pri_var_2 text-white font-bold py-2 px-4 rounded hover:bg-pri_var_1 w-[60%]">
+              Become a member
+            </button>
+          </a>
         </div>
       </div>
     </>

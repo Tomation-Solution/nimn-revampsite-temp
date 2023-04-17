@@ -164,14 +164,16 @@ const Header = () => {
 
         <div className="flex">
           <Image alt="search" src={search} height={60} width={60} />
-          <Image
-            onClick={() => setPaymentModalOpen(!isPaymentModalOpen)}
-            className="cursor-pointer"
-            alt="join"
-            src={join}
-            height={60}
-            width={60}
-          />
+
+          <a href=" https://www.members.nimn.com.ng/prospective">
+            <Image
+              className="cursor-pointer"
+              alt="join"
+              src={join}
+              height={60}
+              width={60}
+            />
+          </a>
           <a href="https://members.nimn.com.ng/">
             {" "}
             <Image alt="login" src={login} height={60} width={60} />

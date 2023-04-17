@@ -40,14 +40,14 @@ const GalleryModal: React.FC<ModalProps> = ({
           {header || "Gallery"}
         </Dialog.Title>
 
-        <div className="flex items-center justify-center relative">
+        <div className="flex items-center  relative">
           <button
             onClick={handlePrevClick}
             className="text-[2em] absolute backdrop-sepia-0 p-[.2em] rounded-full backdrop-contrast-100 shadow-2xl bg-slate-300 "
           >
             <FiChevronLeft />
           </button>
-          <div className="text-center flex flex-col items-center  my-[2em]">
+          <div className="text-center flex flex-col items-center justify-center w-full my-[2em]">
             <Image
               width={800}
               height={660}

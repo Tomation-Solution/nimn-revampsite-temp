@@ -111,12 +111,14 @@ const Corporate = () => {
               </tbody>
             </table>
           </div>
-          <button
-            onClick={() => setPaymentModalOpen(true)}
-            className="bg-pri_var_2 text-white font-bold py-2 px-4 rounded hover:bg-pri_var_1 w-[60%]"
+          <a
+            href=" https://www.members.nimn.com.ng/prospective"
+            className="w-full"
           >
-            Become a member
-          </button>
+            <button className="bg-pri_var_2 text-white font-bold py-2 px-4 rounded hover:bg-pri_var_1 w-[60%]">
+              Become a member
+            </button>
+          </a>
         </div>
       </TemplateContainer>
     </>

@@ -87,14 +87,9 @@ const Footer = () => {
                 <p>About Us</p>
                 <p>Training</p>
                 <p>Portal Login</p>
-                <p>Become Memeber</p>
-              </div>{" "}
-              <div className="flex flex-col gap-y-[1em]">
-                <p>Home</p>
-                <p>About Us</p>
-                <p>Training</p>
-                <p>Portal Login</p>
-                <p>Become Member</p>
+                <a href=" https://www.members.nimn.com.ng/prospective">
+                  <p>Become Memeber</p>
+                </a>
               </div>
             </div>
           </div>
