@@ -96,7 +96,7 @@ const navData = [
   },
   {
     url: "/contact",
-    name: "Contacts",
+    name: "Contact",
   },
 ];
 
