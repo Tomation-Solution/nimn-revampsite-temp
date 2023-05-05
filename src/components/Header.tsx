@@ -10,32 +10,32 @@ import PaymentFormModal from "./Member/component/PaymentForm";
 import { BsChevronDown } from "react-icons/bs";
 
 const navData = [
-  // {
-  //   url: "/election",
-  //   name: "2023 Election",
-  //   subMenu: [
-  //     {
-  //       url: "/election",
-  //       name: "2023 Election Contestants Profile",
-  //     },
-  //     {
-  //       url: "/election/lev",
-  //       name: "List of Eligible Voters",
-  //     },
-  //     {
-  //       url: "https://drive.google.com/file/d/1JUb7_Yjdl4UPbFhvHQi7w7Kdp0lBY30S/view",
-  //       name: "Election Nomination Form",
-  //     },
-  //     {
-  //       url: "https://drive.google.com/file/d/1sJw2T3hHYtXbeB3oKh5L_Pa3XIGKR1I4/view",
-  //       name: "Election Guidelines",
-  //     },
-  //     {
-  //       url: "https://drive.google.com/file/d/124seHWUp3AKU1hV0E8PClAuWOABazl3V/view",
-  //       name: "2022 Annual Report and Accounts",
-  //     },
-  //   ],
-  // },
+  {
+    url: "/election",
+    name: "2023 Election",
+    subMenu: [
+      // {
+      //   url: "/election",
+      //   name: "2023 Election Contestants Profile",
+      // },
+      // {
+      //   url: "/election/lev",
+      //   name: "List of Eligible Voters",
+      // },
+      {
+        url: "https://mcusercontent.com/4ae17fed72111f9edd3f99a9f/files/a0bae4bd-c0d6-da4f-304d-b1714d96e459/2023_ELECTION_NOMINATION_FORM.pdf",
+        name: "Election Nomination Form",
+      },
+      {
+        url: "https://mcusercontent.com/4ae17fed72111f9edd3f99a9f/files/edb96e51-3de2-93f9-b90c-9652b22c02dd/Election_Guidelines_for_2023_NIMN_Elections.01.pdf",
+        name: "Election Guidelines",
+      },
+      // {
+      //   url: "https://drive.google.com/file/d/124seHWUp3AKU1hV0E8PClAuWOABazl3V/view",
+      //   name: "2022 Annual Report and Accounts",
+      // },
+    ],
+  },
   // {
   //   url: "/amc",
   //   name: "2023 AMC",
