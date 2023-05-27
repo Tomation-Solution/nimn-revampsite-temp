@@ -14,10 +14,10 @@ const navData = [
     url: "/election",
     name: "2023 Election",
     subMenu: [
-      // {
-      //   url: "/election",
-      //   name: "2023 Election Contestants Profile",
-      // },
+      {
+        url: "/election",
+        name: "2023 Election Contestants Profile",
+      },
       // {
       //   url: "/election/lev",
       //   name: "List of Eligible Voters",
