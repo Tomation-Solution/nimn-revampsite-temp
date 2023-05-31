@@ -18,10 +18,10 @@ const navData = [
         url: "/election",
         name: "2023 Election Contestants Profile",
       },
-      // {
-      //   url: "/election/lev",
-      //   name: "List of Eligible Voters",
-      // },
+      {
+        url: "https://docs.google.com/spreadsheets/d/14Doig-vRzWiGJjIrE5yheNQyx7uH0p5W/edit?usp=sharing&ouid=107116312523897748343&rtpof=true&sd=true",
+        name: "List of Eligible Voters",
+      },
       {
         url: "https://mcusercontent.com/4ae17fed72111f9edd3f99a9f/files/a0bae4bd-c0d6-da4f-304d-b1714d96e459/2023_ELECTION_NOMINATION_FORM.pdf",
         name: "Election Nomination Form",
@@ -182,7 +182,7 @@ const Header = () => {
             onClick={() => setShowMenu(!showMenu)}
             className="lg:hidden inline text-[34px] "
           >
-            <FiMenu />
+            {showMenu ? "X" : <FiMenu />}
           </button>
         </div>
       </div>
