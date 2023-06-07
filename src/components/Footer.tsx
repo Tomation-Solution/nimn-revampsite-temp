@@ -87,7 +87,7 @@ const Footer = () => {
                 <p>About Us</p>
                 <p>Training</p>
                 <p>Portal Login</p>
-                <a href=" https://www.members.nimn.com.ng/prospective">
+                <a href=" https://members.nimn.com.ng/prospective">
                   <p>Become Memeber</p>
                 </a>
               </div>
