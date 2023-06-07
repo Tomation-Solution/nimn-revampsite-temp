@@ -165,7 +165,7 @@ const Header = () => {
         <div className="flex">
           <Image alt="search" src={search} height={60} width={60} />
 
-          <a href=" https://www.members.nimn.com.ng/prospective">
+          <a href=" https://members.nimn.com.ng/prospective">
             <Image
               className="cursor-pointer"
               alt="join"

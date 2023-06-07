@@ -82,7 +82,7 @@ const NewsInsights = () => {
             })}
           </div>
           <a
-            href=" https://www.members.nimn.com.ng/prospective"
+            href=" https://members.nimn.com.ng/prospective"
             className="w-full"
           >
             <button

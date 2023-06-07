@@ -138,7 +138,7 @@ const SpotLightCard = ({
         </div>
         <hr />
       </div>
-      <a href=" https://www.members.nimn.com.ng/prospective" className="w-full">
+      <a href=" https://members.nimn.com.ng/prospective" className="w-full">
         <button
           onClick={() => setPaymentModalOpen(true)}
           className="bg-pri_var_2 w-[262px] rounded-md h-[77px]"
