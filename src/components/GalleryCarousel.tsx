@@ -2,7 +2,7 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
-import bg_1 from "../../public/images/gallery/gal_16.png";
+import bg_1 from "../../public/images/gallery/gal_16.jpg";
 import bg_2 from "../../public/images/gallery/gal_21.jpg";
 import bg_3 from "../../public/images/gallery/gal_20.jpg";
 
@@ -31,7 +31,7 @@ const items = [
 
         "
         >
-          Fellows Induction
+          President NIMN, Dr. Idorenyen Enang at the Conference
         </p>
       </div>
     ),
@@ -41,7 +41,7 @@ const items = [
     content: (
       <div className="flex items-center justify-center">
         <Image width={800} height={660} src={bg_2} alt="bg_2" />
-        <p
+        {/* <p
           className="
             absolute
             text-[1.5em]
@@ -61,7 +61,7 @@ const items = [
         "
         >
           Acces bank staffs at the Conference
-        </p>
+        </p> */}
       </div>
     ),
   },
@@ -89,8 +89,7 @@ const items = [
 
         "
         >
-          President NIMN, Dr. Idorenyen Enang been interviewed at the fellowship
-          dinner and award night
+          President NIMN, Dr. Idorenyen Enang presenting certificate to a fellow
         </p>
       </div>
     ),
