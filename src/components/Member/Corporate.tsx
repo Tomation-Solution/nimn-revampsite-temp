@@ -112,7 +112,7 @@ const Corporate = () => {
             </table>
           </div>
           <a
-            href=" https://www.members.nimn.com.ng/prospective"
+            href=" https://members.nimn.com.ng/prospective"
             className="w-full"
           >
             <button className="bg-pri_var_2 text-white font-bold py-2 px-4 rounded hover:bg-pri_var_1 w-[60%]">
