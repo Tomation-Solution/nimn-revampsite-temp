@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
+    domains: ["drive.google.com"],
   },
   webpack: (config, { isServer }) => {
     // Add a loader for PDF files
