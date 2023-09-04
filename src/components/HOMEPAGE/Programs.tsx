@@ -25,6 +25,12 @@ const data = [
     body: "Membership through Fast Track Executive Membership …",
     link: "/",
   },
+  {
+    img: grad,
+    title: "June Diet Results",
+    body: "The June Diet Exam Result …",
+    link: "https://docs.google.com/spreadsheets/d/1dmSTQwWfLAGEUIXg9DiFJxp3a9G1AtYO/edit?usp=sharing&ouid=103423927714584137768&rtpof=true&sd=true",
+  },
 ];
 
 const ProgramsCard = ({
