@@ -76,6 +76,10 @@ const navData = [
         url: "/certification/about",
         name: "About the Examination",
       },
+      {
+        url: "https://docs.google.com/spreadsheets/d/1dmSTQwWfLAGEUIXg9DiFJxp3a9G1AtYO/edit?usp=sharing&ouid=103423927714584137768&rtpof=true&sd=true",
+        name: "June Diet Results",
+      },
     ],
   },
   {

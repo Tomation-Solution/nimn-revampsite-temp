@@ -71,7 +71,8 @@ const ProgramsCard = ({
 
 const Programs = () => {
   return (
-    <div className="bg-pri_var_2 lg:p-[10em] md:p-[6em] p-[2em]">
+    <div className="bg-pri_var_2 p-[2em]">
+      {/* // lg:p-[10em] md:p-[6em]  */}
       <div className="text-white  pb-[5em] text-center">
         <p className="md:text-[42px] text-[32px] font-[600] text-pri_var_1">
           National Institute of Marketing of Nigeria (NIMN)
@@ -82,7 +83,7 @@ const Programs = () => {
           directors, customer service managers, relationship directors...
         </p>
       </div>
-      <div className=" grid lg:grid-cols-3 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
+      <div className=" grid lg:grid-cols-4 gap-[3em] md:grid-cols-2 grid-cols-1 gap-y-[12em] gap-x-[2em] pb-[10rem] ">
         {data.map((item, index) => (
           <ProgramsCard
             key={index}

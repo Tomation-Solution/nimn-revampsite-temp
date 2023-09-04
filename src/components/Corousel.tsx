@@ -4,7 +4,7 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Link from "next/link";
-import Showcase from "./HOMEPAGE/Showcase";
+import Showcase, { Showcase4 } from "./HOMEPAGE/Showcase";
 import Image from "next/image";
 import bg_1 from "../../public/images/bg_1.jpg";
 import { GoLocation } from "react-icons/go";
@@ -43,6 +43,10 @@ const items = [
     id: 3,
     content: <Showcase2 />,
   },
+  {
+    id:4,
+    content:<Showcase4 />
+  }
 ];
 
 export default function Corousel() {
