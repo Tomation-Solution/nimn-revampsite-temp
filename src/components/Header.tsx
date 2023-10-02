@@ -80,6 +80,10 @@ const navData = [
         url: "https://docs.google.com/spreadsheets/d/1dmSTQwWfLAGEUIXg9DiFJxp3a9G1AtYO/edit?usp=sharing&ouid=103423927714584137768&rtpof=true&sd=true",
         name: "June Diet Results",
       },
+      {
+        url: "https://drive.google.com/file/d/1A80lx5Xa4ygUo5gbWQEAh6cvfNjm66uB/view?usp=sharing",
+        name: "DECEMBER 2023-DIET-PROFESSIONAL-EXAMINATION NEW",
+      },
     ],
   },
   {
